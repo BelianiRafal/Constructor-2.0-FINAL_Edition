@@ -33,6 +33,14 @@ import { CategoryOneBannerWhite } from "./categoryOneBannerWhite.js";
 import { AdditionalCategories } from "./additional_categories.js";
 import { TwoCategory } from "./twoCategories.js";
 import { Create2Columns_Grid } from "./Create2Columns_Grid.js";
+import { CategoryThree } from "./categoryThree.js";
+import { CategoryThreeLast } from "./categoryThreeLast.js";
+import { ProductIMG } from "./productIMG.js";
+import { ImageWithLinkThree } from "./imageWithLinkThree.js";
+import { ProductFree } from "./productFree.js";
+import { OfferFree } from "./Offer.js";
+import { ProductFirst } from "./productFirst.js";
+import { OfferFreeLP } from "./OfferLP.js";
 
 export {
   ProductWithSize,
@@ -70,4 +78,12 @@ export {
   AdditionalCategories,
   TwoCategory,
   Create2Columns_Grid,
+  CategoryThree,
+  CategoryThreeLast,
+  ProductIMG,
+  ProductFree,
+  OfferFree,
+  ProductFirst,
+  ImageWithLinkThree,
+  OfferFreeLP,
 };

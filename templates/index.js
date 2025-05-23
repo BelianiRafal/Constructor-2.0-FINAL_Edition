@@ -30,6 +30,13 @@ import { Living } from "./Living.js";
 import { Office } from "./Office.js";
 import { RegularWednesdayNslt } from "./test.js";
 import { FrenchDays } from "./french.js";
+import { GardenMayNL } from "./0705nl.js";
+import { GardenMayLP } from "./0705lp.js";
+import { GardenNL } from "./GardenNL.js";
+import { GardenLP } from "./GardenLP.js";
+import { BirthdayNL } from "./Birthday.js";
+import { ParasolNL } from "./ParasolNL.js";
+import { ParasolLP } from "./ParasolLP.js";
 
 export const templates = {
   newsletter_FGG,
@@ -64,4 +71,11 @@ export const templates = {
   Office,
   RegularWednesdayNslt,
   FrenchDays,
+  GardenMayNL,
+  GardenMayLP,
+  GardenNL,
+  GardenLP,
+  BirthdayNL,
+  ParasolNL,
+  ParasolLP,
 };

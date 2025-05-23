@@ -21,6 +21,14 @@ export const TopImageTitle = isAllowToRender(
       singleLine: `
         <h4 style="color:${color};" class="newsletterTitleH1">${title1}</h4>
       `,
+      birthday: `
+        <h4 style="color:${color}; padding-bottom: 4px;" class="newsletterTitleBirthH1">${title1}</h4>
+        <h5 style="color:${color};" class="newsletterTitleBirthH2">${title2}</h5>
+      `,
+      firstbig: `
+        <h4 style="color:${color};" class="newsletterTitleH1">${title1}</h4>
+        <h5 style="color:${color};" class="newsletterTitleH2">${title2}</h5>
+      `,
     };
 
     return `

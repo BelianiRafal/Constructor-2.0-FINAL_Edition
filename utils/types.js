@@ -53,6 +53,11 @@ export default {
             padding-left: 20px;
             padding-right: 20px;
           }
+
+          .newsletterContainerFree {
+            padding-left: 124px;
+            padding-right: 124px;
+          }
           
           .newsletterCta {
             font-size: 20px;
@@ -127,9 +132,34 @@ export default {
           .newsletterRight10px {
             padding-right: 10px;
           }
+
+          .newsletterRight02px {
+            padding-right: 20px;
+          }
+
+          .newsletterLeft02px {
+            padding-left: 20px;
+          }
+
+          .newsletterRight5px {
+            padding-right: 5px;
+          }
           
           .newsletterLeft10px {
             padding-left: 10px;
+          }
+
+          .newsletterLeft5px {
+            padding-left: 5px;
+          }
+
+          .newsletterLeft20px {
+            padding-left: 20px;
+          }
+          
+          .newsletterRight20px {
+            padding-left: 20px;
+            padding-right: 20px;
           }
           
           /* NEWSLETTER END */
@@ -239,6 +269,16 @@ export default {
 
           
           @media screen and (max-width: 768px) {
+            .stack-column {
+              display: block !important;
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+            .product-img {
+              width: 100% !important;
+              height: auto !important;
+            }
+
             .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
@@ -328,6 +368,11 @@ export default {
               padding-left: 10px;
               padding-right: 10px;
             }
+
+            .newsletterContainerFree {
+              padding-left: 62px;
+              padding-right: 62px;
+            }
           
             .newsletterFreebieContainer {
               padding-left: 10px;
@@ -349,9 +394,34 @@ export default {
             .newsletterLeft10px {
               padding-left: 5px;
             }
+
+            .newsletterLeft20px {
+              padding-left: 10px;
+            }
+
+            .newsletterRight20px {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
           
             .newsletterRight10px {
               padding-right: 5px;
+            }
+
+            .newsletterRight02px {
+              padding-right: 10px;
+            }
+
+            .newsletterLeft02px {
+              padding-left: 10px;
+            }
+
+            .newsletterRight5px {
+              padding-right: 2px;
+            }
+
+            .newsletterLeft5px {
+              padding-left: 2px;
             }
           
             .newsletterBottom20px {
@@ -1204,6 +1274,20 @@ export default {
             font-weight: 400;
             margin:0;
             }
+
+          #newsletter .newsletterTitleBirthH1 {
+              font-size: 45px;
+              line-height: 53px;
+              font-weight: 600;
+              margin:0;
+            }
+
+            #newsletter .newsletterTitleBirthH2 {
+              font-size: 67px;
+              line-height: 53px;
+              font-weight: 600;
+              margin:0;
+            }
             
             #newsletter .newsletterTitleH2 {
             font-size: 30px;
@@ -1239,6 +1323,11 @@ export default {
           #newsletter .newsletterBottom80px {
             padding-bottom: 80px;
           }
+
+          #newsletter .newsletterContainerFree {
+            padding-left: 124px;
+            padding-right: 124px;
+          }
           
           #newsletter .newsletterContainer {
             padding-left: 20px;
@@ -1258,6 +1347,14 @@ export default {
           #newsletter .newsletterCode {
             font-size: 20px;
             line-height: 1.20;
+          }
+
+          #newsletter .newsletterLeft5px {
+            padding-left: 5px;
+          }
+
+          #newsletter .newsletterRight5px {
+            padding-right: 5px;
           }
           
           #newsletter .newsletterBottom20px {
@@ -1279,6 +1376,12 @@ export default {
           #newsletter .newsletterParagraph {
             font-size: 18px;
             line-height: 1.20;
+          }
+
+          #newsletter .newsletterCodeParagraph {
+            font-size: 20px;
+            line-height: 1.20;
+            font-weight: 600;
           }
           
           #newsletter .newsletterTitle {
@@ -1321,6 +1424,23 @@ export default {
           
           #newsletter .newsletterLeft10px {
             padding-left: 10px;
+          }
+
+          #newsletter .newsletterRight02px {
+            padding-right: 20px;
+          }
+
+          #newsletter .newsletterLeft02px {
+            padding-left: 20px;
+          }
+
+          #newsletter .newsletterLeft20px {
+            padding-left: 20px;
+          }
+
+          #newsletter .newsletterRight20px {
+            padding-left: 20px;
+            padding-right: 20px;
           }
           
           /* NEWSLETTER END */
@@ -1427,6 +1547,17 @@ export default {
           }
           
           @media screen and (max-width: 768px) {
+            #newsletter .stack-column {
+              display: block !important;
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+
+            #newsletter .product-img {
+              width: 100% !important;
+              height: auto !important;
+            }
+
             #newsletter .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
@@ -1435,10 +1566,25 @@ export default {
               font-size: 30px;
               line-height: 35px;
             }
+
+            #newsletter .newsletterTitleBirthH1 {
+              font-size: 30px;
+              line-height: 35px;
+            }
+
+            #newsletter .newsletterContainerFree {
+              padding-left: 62px;
+              padding-right: 62px;
+            }
               
             #newsletter .newsletterTitleH2 {
               font-size: 22px;
               line-height: 27px;
+            }
+
+            #newsletter .newsletterTitleBirthH2 {
+              font-size: 45px;
+              line-height: 50px;
             }
 
             .newsletterProductContainer {
@@ -1552,13 +1698,38 @@ export default {
             #newsletter .newsletterParagraph {
               font-size: 16px;
             }
+
+            #newsletter .newsletterLeft5px {
+              padding-left: 2px;
+            }
+
+            #newsletter .newsletterRight5px {
+              padding-right: 2px;
+            }
           
             #newsletter .newsletterLeft10px {
               padding-left: 5px;
             }
+
+            #newsletter .newsletterLeft20px {
+              padding-left: 10px;
+            }
+
+            #newsletter .newsletterRight20px {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
           
             #newsletter .newsletterRight10px {
               padding-right: 5px;
+            }
+
+            #newsletter .newsletterRight02px {
+              padding-right: 10px;
+            }
+  
+            #newsletter .newsletterLeft02px {
+              padding-left: 10px;
             }
           
             #newsletter .newsletterBottom20px {

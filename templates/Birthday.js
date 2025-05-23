@@ -8,6 +8,7 @@ import {
   ImageWithLink,
   Space,
   Product,
+  ProductIMG,
   OfferPartCodes,
   Timer,
   TopImageTitle,
@@ -15,6 +16,8 @@ import {
   CategoryOneBannerWhite,
   CategoryOneBanner,
   CategoryOneLast,
+  CategoryThree,
+  CategoryThreeLast,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -22,7 +25,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function BirthdayNL({
   links,
   getProductById,
   getCategoryLink,
@@ -144,8 +147,8 @@ export async function RegularWednesdayNslt({
                           href: links[0],
                           title1: queries.tit[0],
                           title2: queries.tit[1],
-                          color: "#000000",
-                          type: "twoSameLines",
+                          color: "#750000",
+                          type: "birthday",
                         })}
                       `
                       }
@@ -155,91 +158,87 @@ export async function RegularWednesdayNslt({
               `
             }
             <tr>
+                <td align="center">
+                    ${ImageWithLink({
+                        href: links[0],
+                        src: links[2],
+                    })}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <span class="newsletterParagraph" style="color: #000000">
+                                        ${queries.intro}
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+              <td class="newsletterBottom35px"></td>
+            </tr>
+            <tr>
             <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
               <tbody>
-                ${categories
-                  .map((item, index) => {
-                    console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
-          
-                    const isLast = index === categories.length - 1; // Sprawdzenie, czy to ostatni element
-                    const background = item.background; // Domyślny kolor tła
-                    const color = item.color; // Domyślny kolor tekstu
-                    const srcValue = item.src?.value || ""; // Pobranie `value`, jeśli istnieje
-          
-                    // Pobieranie poprawnego indeksu dla `queries.categories`
-                    const dataIndex = index * 2; 
-                    if (dataIndex >= queries.categories.length) return ""; // Zabezpieczenie przed wyjściem poza zakres
-          
-                    const title = queries.categories[dataIndex] || "Default Title";
-                    const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-                    
-                    // Wybór komponentu na podstawie pozycji (pierwszy, ostatni, inny)
-                    let categoryComponent;
-                    if (index === 3) {
-                      categoryComponent = CategoryOneLast; // Używamy CategoryOneLast dla ostatniej kategorii
-                    } else {
-                      categoryComponent = Category; // Dla pozostałych używamy Category
-                    }
-          
-                    return `
-                      <tr>
-                        <td style="background-color: ${background}; color: ${color};">
-                          ${categoryComponent({
-                            data: [title, paragraph], // Przekazanie poprawnej pary danych
-                            href: getCategoryLink(item.href),
-                            name: title,
-                            color: item.color,
-                            desc: paragraph,
-                            src: item.src,
-                            cta: getPhrase("Shop now"),
-                            type: "wednesday",
-                            products: item.products?.map((product) =>
-                              getProductById(product.id, product.src)
-                            ) || [],
-                          })}
-                        </td>
-                      </tr>
-                    `;
-                  })
-                  .join("")}
-              </tbody>
-            </td>
-          </tr>
-          <tr>
-              <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-                  ${Space({ className: "newsletterBottom35px" })}
-              </td>
-          </tr>
-          <tr>
-            <td align="center" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                <tr>
-                  <td align="center" class="newsletterBottom35px">
-                    <span class="newsletterTitle">${queries.additionalt[0]}</span>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" class="newsletterProductContainerLast" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                    ${[0, 1].map(rowIndex => `
+              ${categories
+                .map((item, index) => {
+                  console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
+              
+                  if (index >= 5) return ""; // Obsługa tylko 5 kategorii
+              
+                  const isLast = index === 4;
+                  const background = item.background || "#ffffff";
+                  const color = item.color || "#000000";
+                  const srcValue = item.src?.value || "";
+              
+                  const title = queries.categories[index] || "Default Title";
+              
+                  // Pobranie i zabezpieczenie listy produktów
+                  const allProducts = Array.isArray(item.products) ? item.products : [];
+              
+                  // Produkt do linku (pierwszy)
+                  const firstProductRaw = allProducts[0];
+                  const firstProduct =
+                    firstProductRaw && getProductById(firstProductRaw.id, firstProductRaw.src);
+              
+                  const href = firstProduct?.href || "#";
+              
+                  // Produkty 2, 3, 4 (indeksy 1, 2, 3)
+                  const remainingProducts = allProducts.slice(1, 4);
+                  const products = remainingProducts
+                    .map((product) =>
+                      product && getProductById(product.id, product.src)
+                    )
+                    .filter((p) => p); // Usuń undefined
+              
+                  const categoryComponent = isLast ? CategoryThreeLast : CategoryThree;
+              
+                  return `
                     <tr>
-                      ${[0, 1].map(colIndex => {
-                      const index = rowIndex * 2 + colIndex;
-                      if (!categories_add[index]) return "";
-                        return `
-                          ${AdditionalCategories({
-                            name: queries.additional[index],
-                            href: getCategoryLink(categories_add[index].href),
-                            src: categories_add[index].src,
-                          })}
-                        `;
-                      }).join("")}
+                      <td style="background-color: ${background}; color: ${color};">
+                        ${categoryComponent({
+                          href: getCategoryLink(item.href),
+                          name: title,
+                          src: item.src,
+                          cta: getPhrase("Shop now"),
+                          type: "monday",
+                          color: color,
+                          products: item.products?.map((product) =>
+                             getProductById(product.id, product.src)
+                              ) || [],
+                        })}
+                      </td>
                     </tr>
-                    `).join("")}
-                </table>
+                  `;
+                })
+              .join("")}
+              </tbody>
             </td>
           </tr>
         <tbody>

@@ -22,7 +22,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function GardenMayNL({
   links,
   getProductById,
   getCategoryLink,
@@ -67,6 +67,92 @@ export async function RegularWednesdayNslt({
     NO: [""],
     SK: [""],
   };
+
+  const cat1 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Boho?utm_source=newsletter&utm_medium=email&utm_campaign=33015",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33010",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33002",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33000",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32998",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33008",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33005",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32999",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33014",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33011",
+    IT: "https://www.beliani.it/giardino/tutti+i+prodotti/?Stile=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33007",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33003",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33009",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/looks/?Tyyli=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33004",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Boho?utm_source=newsletter&utm_medium=email&utm_campaign=33012",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Boho?utm_source=newsletter&utm_medium=email&utm_campaign=33001",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Boho?utm_source=newsletter&utm_medium=email&utm_campaign=33013",
+    HU: "https://www.beliani.hu/kulter/minden+termek/?Stilus=Boho&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33006",
+  };
+
+  const cat2 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Scandinavian&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33015",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Skandynawski&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33010",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33002",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33000",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32998",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Scandinavisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33008",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Scandinave&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33005",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Scandinave&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32999",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Escandinavo&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33014",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Escandinavo&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33011",
+    IT: "https://www.beliani.it/giardino/tutti+i+prodotti/?Stile=Scandinavo&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33007",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Skandinavisk&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33003",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Skandinavisk&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33009",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Skandinaavinen?utm_source=newsletter&utm_medium=email&utm_campaign=33004",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Skandinavisk?utm_source=newsletter&utm_medium=email&utm_campaign=33012",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Skandinavsky?utm_source=newsletter&utm_medium=email&utm_campaign=33001",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Skandinavsky&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33013",
+    HU: "https://www.beliani.hu/kulter/minden+termek/?Stilus=Skandinav&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33006",
+  };
+
+  const cat3 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/outdoor-furniture/all+products/?Style=Traditional&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33015",
+    PL: "https://www.beliani.pl/ogrod/meble-ogrodowe/wszystkie+produkty/?Styl=Klasyczny&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33010",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33002",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33000",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32998",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Traditioneel&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33008",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Traditionnel&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33005",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Traditionnel&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32999",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Tradicional&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33014",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Tradicional&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33011",
+    IT: "https://www.beliani.it/arredo-giardino/tutti+i+prodotti/?Stile=Classico&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33007",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Traditionel&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33003",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Klassisk&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33009",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Perinteinen?utm_source=newsletter&utm_medium=email&utm_campaign=33004",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Traditionell?utm_source=newsletter&utm_medium=email&utm_campaign=33012",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/v%C5%A1echny+produkty/?Styl=Tradicni?utm_source=newsletter&utm_medium=email&utm_campaign=33001",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Tradicny&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33013",
+    HU: "https://www.beliani.hu/kerti-garniturak/kulter/minden+termek/?Stilus=Klasszikus&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33006",
+  };
+
+  const cat4 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Cottage?utm_source=newsletter&utm_medium=email&utm_campaign=33015",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Cottage?utm_source=newsletter&utm_medium=email&utm_campaign=33010",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33002",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33000",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32998",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33008",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33005",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=32999",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Campestre&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33014",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Casa_de_campo&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33011",
+    IT: "https://www.beliani.it/arredo-giardino/tutti+i+prodotti/?Stile=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33007",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Sommerhus&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33003",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33009",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Mokkimainen?utm_source=newsletter&utm_medium=email&utm_campaign=33004",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Lantlig?utm_source=newsletter&utm_medium=email&utm_campaign=33012",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Cottage?utm_source=newsletter&utm_medium=email&utm_campaign=33001",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Cottage&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33013",
+    HU: "https://www.beliani.hu/kerti-garniturak/kulter/minden+termek/?Stilus=Videki&sort=default?utm_source=newsletter&utm_medium=email&utm_campaign=33006",
+  };
+
+  const categoryLinks = [cat1, cat2, cat3, cat4];
   
   return `
   ${Header(
@@ -186,7 +272,7 @@ export async function RegularWednesdayNslt({
                         <td style="background-color: ${background}; color: ${color};">
                           ${categoryComponent({
                             data: [title, paragraph], // Przekazanie poprawnej pary danych
-                            href: getCategoryLink(item.href),
+                            href: categoryLinks[index]?.[country],
                             name: title,
                             color: item.color,
                             desc: paragraph,

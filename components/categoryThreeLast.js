@@ -1,8 +1,9 @@
 import { isAllowToRender } from "../helpers/optimizeImage.js";
 import { ImageWithLink, Product, Title } from "./index.js";
+import { ProductFirst } from "./productFirst.js";
 import { ProductIMG } from "./productIMG.js";
 
-export const CategoryOld = isAllowToRender(
+export const CategoryThreeLast = isAllowToRender(
   ({
     name,
     href,
@@ -76,8 +77,9 @@ export const CategoryOld = isAllowToRender(
       </tr>
       <tr>
         <td>
-          ${ProductIMG(
+          ${ProductFirst(
             products[0],
+            src,
             "left",
             `color: ${color || "#000000"}`
           )}
@@ -89,48 +91,40 @@ export const CategoryOld = isAllowToRender(
     </thead>
     <tbody>
       <tr>
-        <td style="padding-top: 0px; padding-bottom: 0px;" class="newsletterContainer">
-          <table cellspacing="0" cellpadding="0" style="width: 100%; ">
+        <td>
+          <table cellspacing="0" cellpadding="0" border="0" align="center">
             <tr>
-              <td class="">
-                <!-- 1-2 Products table -->
-                <table cellspacing="0" cellpadding="0" style="width: 100%; ">
-                  <tr>
-                    <td style="padding-top: 0px; padding-left: 0px; vertical-align: top; width: 33,33%" class="newsletterRight10px">
+                    <td style="vertical-align: top; width: 33.333333333333336%;">
                       ${ProductIMG(
                         products[1],
                         "left",
                         `color: ${color || "#000000"}`
                       )}
                     </td>
-                    <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 33,33%" class="">
+                    <td style="vertical-align: top; width: 33.333333333333336%;">
                       ${ProductIMG(
                         products[2],
                         "left",
                         `color: ${color || "#000000"}`
                       )}
                     </td>
-                    <td style="padding-top: 0px; padding-right: 0px; vertical-align: top; width: 33,33%" class="newsletterLeft10px">
+                    <td style="vertical-align: top; width: 33.333333333333336%;">
                       ${ProductIMG(
                         products[3],
                         "left",
                         `color: ${color || "#000000"}`
                       )}
                     </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="newsletterBottom35px">
-              </td>
             </tr>
           </table>
         </td>
       </tr>
       <tr>
         <td class="newsletterBottom35px">
+        </td>
+      </tr>
+      <tr>
+        <td class="newsletterBottom80px">
           <table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
               <tr>

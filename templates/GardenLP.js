@@ -22,7 +22,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function GardenLP({
   links,
   getProductById,
   getCategoryLink,
@@ -67,6 +67,104 @@ export async function RegularWednesdayNslt({
     NO: [""],
     SK: [""],
   };
+
+  const cat1 = {
+    UK: "https://www.beliani.co.uk/outdoor-furniture/balcony-furniture/?Material=Rattan,PE_Rattan&sort=default",
+    PL: "https://www.beliani.pl/meble-ogrodowe/meble-balkonowe/?Material=Rattan,Technorattan&sort=default",
+    DE: "https://www.beliani.de/gartenmobel/balkon-and-terrassenmobel/looks/?Material=Rattan,PE_Rattan&sort=default",
+    AT: "https://www.beliani.at/gartenmobel/balkon-and-terrassenmobel/looks/?Material=Rattan,PE_Rattan&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmobel/balkon-and-terrassenmobel/looks/?Material=Rattan,PE_Rattan&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/tuinmeubels/balkon-en-terrasmeubels/looks/?Materiaal=Rotan,PE_rotan&sort=default",
+    FR: "https://www.beliani.fr/mobilier-de-jardin/set-de-terrasse/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    CHFR: "https://www.beliani.ch/mobilier-de-jardin/set-de-terrasse/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    ES: "https://www.beliani.es/muebles-de-exterior/muebles-de-patio/looks/?Material=Ratan,Ratan_sintetico&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/patio-e-terraco/?Material=Rattan,Ratan_sintetico&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/patio-e-terrazzo/",
+    DK: "https://www.beliani.dk/havemoebler/altanmobler/?Materiale=Rattan,PE_Rattan&sort=default ",
+    NO: "https://www.beliani.no/hagemobler/balkongmoebler/?Materiale=Rotting,Kunstrotting&sort=default ",
+    FI: "https://www.beliani.fi/ulkokalusteet/parvekekalusteet/?Materiaali=Rottinki,Polyrottinki",
+    SE: "https://www.beliani.se/utemobler/balkongmobler/looks/?Material=Rotting,Konstrotting&sort=default",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/balkonovy-nabytek/?Material=Ratan,Umely_ratan&sort=default",
+    SK: "https://www.beliani.sk/zahradny-nabytok/balkonovy-nabytok/?Material=Ratan,Umely_ratan&sort=default",
+    HU: "https://www.beliani.hu/kulter/terasz-es-erkely-butorok/?Anyag_tipusa=Rattan,Szintetikus_rattan&sort=default",
+    BEFR: "https://www.beliani.be/mobilier-de-jardin/set-de-terrasse/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/tuinmeubels/balkon-en-terrasmeubels/looks/?Materiaal=Rotan,PE_rotan&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/mobilier-de-gradina/balcon-si-terasa/?Material=Ratan,Ratan_sintetic&sort=default",
+  };
+
+  const cat2 = {
+    UK: "https://www.beliani.co.uk/outdoor-furniture/lounge-sets/?Material=Rattan,PE_Rattan&sort=default",
+    PL: "https://www.beliani.pl/meble-ogrodowe/zestawy-wypoczynkowe/?Material=Rattan,Technorattan&sort=default",
+    DE: "https://www.beliani.de/gartenmobel/loungemobel/?Material=Rattan,PE_Rattan&sort=default",
+    AT: "https://www.beliani.at/gartenmobel/loungemobel/?Material=Rattan,PE_Rattan&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmobel/loungemobel/?Material=Rattan,PE_Rattan&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/tuinmeubels/loungemeubels/?Materiaal=Rotan,PE_rotan&sort=default",
+    FR: "https://www.beliani.fr/mobilier-de-jardin/salons-de-jardin/?Matiere=Rotin,Polyrotin&sort=default",
+    CHFR: "https://www.beliani.ch/mobilier-de-jardin/salons-de-jardin/?Matiere=Rotin,Polyrotin&sort=default",
+    ES: "https://www.beliani.es/muebles-de-exterior/conjuntos-de-jardin/?Material=Ratan,Ratan_sintetico&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/conjuntos-de-jardim/?Material=Rattan,Ratan_sintetico&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/salotti-da-giardino/",
+    DK: "https://www.beliani.dk/havemoebler/loungemobler/?Materiale=Rattan,PE_Rattan&sort=default ",
+    NO: "https://www.beliani.no/hagemobler/loungemobler/?Materiale=Rotting,Kunstrotting&sort=default",
+    FI: "https://www.beliani.fi/ulkokalusteet/ulkosohvaryhmat/?Materiaali=Rottinki,Polyrottinki",
+    SE: "https://www.beliani.se/utemobler/loungemobler/looks/?Material=Rotting,Konstrotting&sort=default",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/zahradni-soupravy/?Material=Ratan,Umely_ratan&sort=default",
+    SK: "https://www.beliani.sk/zahradny-nabytok/zahradne-supravy/?Material=Ratan,Umely_ratan&sort=default",
+    HU: "https://www.beliani.hu/kulter/lounge-butorok/?Anyag_tipusa=Rattan,Szintetikus_rattan&sort=default",
+    BEFR: "https://www.beliani.be/mobilier-de-jardin/salons-de-jardin/?Matiere=Rotin,Polyrotin&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/tuinmeubels/loungemeubels/?Materiaal=Rotan,PE_rotan&sort=default",
+    RO: "https://www.beliani.ro/mobilier-de-gradina/saloane/?Material=Ratan,Ratan_sintetic&sort=default",
+  };
+
+  const cat3 = {
+    UK: "https://www.beliani.co.uk/outdoor-furniture/garden-dining-sets/?Material=PE_Rattan&sort=default",
+    PL: "https://www.beliani.pl/meble-ogrodowe/zestawy-stol-z-krzeslami/?Material=Technorattan&sort=default",
+    DE: "https://www.beliani.de/gartenmobel/gartenmobel-sets/looks/?Material=PE_Rattan&sort=default",
+    AT: "https://www.beliani.at/gartenmobel/gartenmobel-sets/looks/?Material=PE_Rattan&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmobel/gartenmobel-sets/looks/?Material=PE_Rattan&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/tuinmeubels/tuinmeubelsets/looks/?Materiaal=PE_rotan&sort=default",
+    FR: "https://www.beliani.fr/mobilier-de-jardin/sets-de-jardin/looks/?Matiere=Polyrotin&sort=default",
+    CHFR: "https://www.beliani.ch/mobilier-de-jardin/sets-de-jardin/looks/?Matiere=Polyrotin&sort=default",
+    ES: "https://www.beliani.es/muebles-de-exterior/comedores-de-exterior/looks/?Material=Ratan_sintetico&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/mesa-e-cadeiras-de-jardim/?Material=Ratan_sintetico&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/set-da-giardino/",
+    DK: "https://www.beliani.dk/havemoebler/haveset/?Materiale=PE_Rattan&sort=default ",
+    NO: "https://www.beliani.no/hagemobler/utendoers-spisegrupper/?Materiale=Kunstrotting&sort=default",
+    FI: "https://www.beliani.fi/ulkokalusteet/puutarhakalustesetit/?Materiaali=Polyrottinki",
+    SE: "https://www.beliani.se/utemobler/utemobelgrupper/looks/?Material=Konstrotting&sort=default",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/zahradni-jidelni-sady/?Material=Umely_ratan&sort=default",
+    SK: "https://www.beliani.sk/zahradny-nabytok/zahradne-jedalenske-sady/?Material=Umely_ratan&sort=default",
+    HU: "https://www.beliani.hu/kulter/kerti-butor-szett/?Anyag_tipusa=Szintetikus_rattan&sort=default",
+    BEFR: "https://www.beliani.be/mobilier-de-jardin/sets-de-jardin/looks/?Matiere=Polyrotin&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/tuinmeubels/tuinmeubelsets/looks/?Materiaal=PE_rotan&sort=default",
+    RO: "https://www.beliani.ro/mobilier-de-gradina/seturi-de-luat-masa/?Material=Ratan_sintetic&sort=default",
+  };
+
+  const cat4 = {
+    UK: "https://www.beliani.co.uk/outdoor-furniture/patio-daybeds/?Material=Rattan,PE_Rattan&sort=default",
+    PL: "https://www.beliani.pl/meble-ogrodowe/lozka-ogrodowe/?Material=Rattan,Technorattan&sort=default",
+    DE: "https://www.beliani.de/gartenmobel/sonneninseln/looks/?Material=Rattan,PE_Rattan&sort=default",
+    AT: "https://www.beliani.at/gartenmobel/sonneninseln/looks/?Material=Rattan,PE_Rattan&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmobel/sonneninseln/looks/?Material=Rattan,PE_Rattan&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/tuinmeubels/zonne-eilanden/looks/?Materiaal=Rotan,PE_rotan&sort=default",
+    FR: "https://www.beliani.fr/mobilier-de-jardin/lits-de-jardin/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    CHFR: "https://www.beliani.ch/mobilier-de-jardin/lits-de-jardin/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    ES: "https://www.beliani.es/muebles-de-exterior/camas-de-patio/looks/?Material=Ratan,Ratan_sintetico&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/camas-de-jardim/?Material=Rattan,Ratan_sintetico&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/divani-coperti/",
+    DK: "https://www.beliani.dk/havemoebler/elskovsrede/?Materiale=Rattan,PE_Rattan&sort=default ",
+    NO: "https://www.beliani.no/hagemobler/hagesenger/?Materiale=Rotting,Kunstrotting&sort=default",
+    FI: "https://www.beliani.fi/ulkokalusteet/aurinkovuoteet/?Materiaali=Rottinki,Polyrottinki",
+    SE: "https://www.beliani.se/utemobler/solsangar/looks/?Material=Rotting,Konstrotting&sort=default",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/zahradni-postele/?Material=Ratan,Umely_ratan&sort=default",
+    SK: "https://www.beliani.sk/zahradny-nabytok/plazove-kose/?Material=Ratan,Umely_ratan&sort=default",
+    HU: "https://www.beliani.hu/kulter/napagy-szigetek/?Anyag_tipusa=Rattan,Szintetikus_rattan&sort=default",
+    BEFR: "https://www.beliani.be/mobilier-de-jardin/lits-de-jardin/looks/?Matiere=Rotin,Polyrotin&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/tuinmeubels/zonne-eilanden/looks/?Materiaal=Rotan,PE_rotan&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/mobilier-de-gradina/canapele-acoperite/?Material=Ratan,Ratan_sintetic&sort=default",
+  };
+
+  const categoryLinks = [cat1, cat2, cat3, cat4];
   
   return `
   ${Header(
@@ -145,7 +243,7 @@ export async function RegularWednesdayNslt({
                           title1: queries.tit[0],
                           title2: queries.tit[1],
                           color: "#000000",
-                          type: "twoSameLines",
+                          type: "up_to",
                         })}
                       `
                       }
@@ -186,7 +284,7 @@ export async function RegularWednesdayNslt({
                         <td style="background-color: ${background}; color: ${color};">
                           ${categoryComponent({
                             data: [title, paragraph], // Przekazanie poprawnej pary danych
-                            href: getCategoryLink(item.href),
+                            href: categoryLinks[index]?.[country],
                             name: title,
                             color: item.color,
                             desc: paragraph,

@@ -22,7 +22,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function GardenMayLP({
   links,
   getProductById,
   getCategoryLink,
@@ -67,6 +67,104 @@ export async function RegularWednesdayNslt({
     NO: [""],
     SK: [""],
   };
+
+  const cat1 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Boho",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Boho&sort=default",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Boho&sort=default",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Boho&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Boho&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Boho&sort=default",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Boho&sort=default",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Boho&sort=default",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Boho&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Boho&sort=default",
+    IT: "https://www.beliani.it/giardino/tutti+i+prodotti/?Stile=Boho&sort=default",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Boho&sort=default ",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Boho&sort=default",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/looks/?Tyyli=Boho&sort=default",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Boho",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Boho",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Boho",
+    HU: "https://www.beliani.hu/kulter/minden+termek/?Stilus=Boho&sort=default",
+    BEFR: "https://www.beliani.be/meubles-de-jardin/tous+les+produits/?Style=Boho&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/alle+producten/?Stijl=Boho&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/toate+produsele/?Stil=Boho&sort=default",
+  };
+
+  const cat2 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Scandinavian&sort=default",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Skandynawski&sort=default",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Skandinavisch&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Scandinavisch&sort=default",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Scandinave&sort=default",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Scandinave&sort=default",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Escandinavo&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Escandinavo&sort=default",
+    IT: "https://www.beliani.it/giardino/tutti+i+prodotti/?Stile=Scandinavo&sort=default",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Skandinavisk&sort=default ",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Skandinavisk&sort=default  ",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Skandinaavinen",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Skandinavisk",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Skandinavsky",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Skandinavsky&sort=default",
+    HU: "https://www.beliani.hu/kulter/minden+termek/?Stilus=Skandinav&sort=default",
+    BEFR: "https://www.beliani.be/meubles-de-jardin/tous+les+produits/?Style=Scandinave&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/alle+producten/?Stijl=Scandinavisch&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/toate+produsele/?Stil=Scandinav&sort=default",
+  };
+
+  const cat3 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/outdoor-furniture/all+products/?Style=Traditional&sort=default",
+    PL: "https://www.beliani.pl/ogrod/meble-ogrodowe/wszystkie+produkty/?Styl=Klasyczny&sort=default",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Klassisch&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Traditioneel&sort=default",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Traditionnel&sort=default",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Traditionnel&sort=default",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Tradicional&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Tradicional&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/tutti+i+prodotti/?Stile=Classico&sort=default",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Traditionel&sort=default ",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Klassisk&sort=default",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Perinteinen",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Traditionell",
+    CZ: "https://www.beliani.cz/venkovni-nabytek/v%C5%A1echny+produkty/?Styl=Tradicni",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Tradicny&sort=default",
+    HU: "https://www.beliani.hu/kerti-garniturak/kulter/minden+termek/?Stilus=Klasszikus&sort=default",
+    BEFR: "https://www.beliani.be/meubles-de-jardin/tous+les+produits/?Style=Traditionnel&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/alle+producten/?Stijl=Traditioneel&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/toate+produsele/?Stil=Traditional&sort=default",
+  };
+
+  const cat4 = {
+    UK: "https://www.beliani.co.uk/garden-furniture/all+products/?Style=Cottage",
+    PL: "https://www.beliani.pl/ogrod/wszystkie+produkty/?Styl=Cottage",
+    DE: "https://www.beliani.de/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default",
+    AT: "https://www.beliani.at/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default",
+    CHDE: "https://www.beliani.ch/gartenmoebel/alle+produkte/?Stil=Landhausstil&sort=default",
+    NL: "https://www.beliani.nl/tuinmeubelen/alle+producten/?Stijl=Cottage&sort=default",
+    FR: "https://www.beliani.fr/meubles-de-jardin/tous+les+produits/looks/?Style=Cottage&sort=default",
+    CHFR: "https://www.beliani.ch/meubles-de-jardin/tous+les+produits/looks/?Style=Cottage&sort=default",
+    ES: "https://www.beliani.es/jardin/muebles-de-exterior/todos+los+productos/looks/?Estilo=Campestre&sort=default",
+    PT: "https://www.beliani.pt/mobiliario-de-jardim/todos+os+produtos/?Estilo=Casa_de_campo&sort=default",
+    IT: "https://www.beliani.it/arredo-giardino/tutti+i+prodotti/?Stile=Cottage&sort=default",
+    DK: "https://www.beliani.dk/havemobler/alle+produkter/looks/?Stil=Sommerhus&sort=default ",
+    NO: "https://www.beliani.no/hagemoebler/alle+produkter/?Stil=Cottage&sort=default",
+    FI: "https://www.beliani.fi/puutarhakalusteet/kaikki+tuotteet/?Tyyli=Mokkimainen",
+    SE: "https://www.beliani.se/tradgardsmobler/alla+produkter/?Stil=Lantlig",
+    CZ: "https://www.beliani.cz/zahradni-nabytek/v%C5%A1echny+produkty/?Styl=Cottage",
+    SK: "https://www.beliani.sk/zahrada/zobrazit+vsetky+produkty/?Styl=Cottage&sort=default",
+    HU: "https://www.beliani.hu/kerti-garniturak/kulter/minden+termek/?Stilus=Videki&sort=default",
+    BEFR: "https://www.beliani.be/meubles-de-jardin/tous+les+produits/?Style=Cottage&sort=default",
+    BENL: "https://www.beliani.be/tuinmeubelen/alle+producten/?Stijl=Cottage&sort=default",
+    RO: "https://www.beliani.ro/mobila-de-gradina/toate+produsele/?Stil=Cottage",
+  };
+
+  const categoryLinks = [cat1, cat2, cat3, cat4];
   
   return `
   ${Header(
@@ -186,7 +284,7 @@ export async function RegularWednesdayNslt({
                         <td style="background-color: ${background}; color: ${color};">
                           ${categoryComponent({
                             data: [title, paragraph], // Przekazanie poprawnej pary danych
-                            href: getCategoryLink(item.href),
+                            href: categoryLinks[index]?.[country],
                             name: title,
                             color: item.color,
                             desc: paragraph,
