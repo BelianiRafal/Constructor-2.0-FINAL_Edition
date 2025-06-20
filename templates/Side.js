@@ -15,6 +15,10 @@ import {
   CategoryOneBannerWhite,
   CategoryOneBanner,
   CategoryOneLast,
+  MyIntro,
+  FreeTimer,
+  fCategory,
+  sCategory,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -22,7 +26,7 @@ import { priceFree } from "../helpers/priceFree.js";
 import templates from "../main/data/templates.js";
 import { getCodes } from "../utils/getCodes.js";
 
-export async function RegularWednesdayNslt({
+export async function Side({
   links,
   getProductById,
   getCategoryLink,
@@ -47,25 +51,29 @@ export async function RegularWednesdayNslt({
   add_utm
 }) {
   const codes = getCodes(queries);
+
   const timer_link = {
-    CHDE: [""],
-    CHFR: [""],
-    UK: [""],
-    DE: [""],
-    FR: [""],
-    AT: [""],
-    ES: [""],
-    PL: [""],
-    NL: [""],
-    PT: [""],
-    IT: [""],
-    SE: [""],
-    HU: [""],
-    DK: [""],
-    CZ: [""],
-    FI: [""],
-    NO: [""],
-    SK: [""],
+    CHDE: ["https://gen.sendtric.com/countdown/yphrv0c8e4"],
+    CHFR: ["https://gen.sendtric.com/countdown/109q8k3ae5"],
+    UK: ["https://gen.sendtric.com/countdown/m4v39y0fmq"],
+    DE: ["https://gen.sendtric.com/countdown/yphrv0c8e4"],
+    FR: ["https://gen.sendtric.com/countdown/109q8k3ae5"],
+    AT: ["https://gen.sendtric.com/countdown/yphrv0c8e4"],
+    ES: ["https://gen.sendtric.com/countdown/25cnia754m"],
+    PL: ["https://gen.sendtric.com/countdown/c6gflgql4u"],
+    NL: ["https://gen.sendtric.com/countdown/8jva613dg1"],
+    PT: ["https://gen.sendtric.com/countdown/5mxfwdonog"],
+    IT: ["https://gen.sendtric.com/countdown/c4igrk0cls"],
+    SE: ["https://gen.sendtric.com/countdown/1mkweovnb7"],
+    HU: ["https://gen.sendtric.com/countdown/f519kcvre8"],
+    DK: ["https://gen.sendtric.com/countdown/dwuzd030m6"],
+    CZ: ["https://gen.sendtric.com/countdown/7cn51cxr6y"],
+    FI: ["https://gen.sendtric.com/countdown/am7xdtju91"],
+    NO: ["https://gen.sendtric.com/countdown/h325rin9g4"],
+    SK: ["https://gen.sendtric.com/countdown/v7ksb5886v"],
+    BENL: ["https://gen.sendtric.com/countdown/8jva613dg1"],
+    BEFR: ["https://gen.sendtric.com/countdown/109q8k3ae5"],
+    RO: ["https://gen.sendtric.com/countdown/iavokpsy13"],
   };
   
   return `
@@ -155,93 +163,55 @@ export async function RegularWednesdayNslt({
               `
             }
             <tr>
-            <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
-              <tbody>
-                ${categories
-                  .map((item, index) => {
-                    console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
-          
-                    const isLast = index === categories.length - 1; // Sprawdzenie, czy to ostatni element
-                    const background = item.background; // Domyślny kolor tła
-                    const color = item.color; // Domyślny kolor tekstu
-                    const srcValue = item.src?.value || ""; // Pobranie `value`, jeśli istnieje
-          
-                    // Pobieranie poprawnego indeksu dla `queries.categories`
-                    const dataIndex = index * 2; 
-                    if (dataIndex >= queries.categories.length) return ""; // Zabezpieczenie przed wyjściem poza zakres
-          
-                    const title = queries.categories[dataIndex] || "Default Title";
-                    const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-                    
-                    // Wybór komponentu na podstawie pozycji (pierwszy, ostatni, inny)
-                    let categoryComponent;
-                    if (index === 3) {
-                      categoryComponent = CategoryOneLast; // Używamy CategoryOneLast dla ostatniej kategorii
-                    } else {
-                      categoryComponent = Category; // Dla pozostałych używamy Category
-                    }
-          
-                    return `
-                      <tr>
-                        <td style="background-color: ${background}; color: ${color};">
-                          ${categoryComponent({
-                            data: [title, paragraph], // Przekazanie poprawnej pary danych
-                            href: getCategoryLink(item.href),
-                            name: title,
-                            color: item.color,
-                            desc: paragraph,
-                            src: item.src,
-                            cta: getPhrase("Shop now"),
-                            type: "wednesday",
-                            products: item.products?.map((product) =>
-                              getProductById(product.id, product.src)
-                            ) || [],
-                          })}
-                        </td>
-                      </tr>
-                    `;
-                  })
-                  .join("")}
-              </tbody>
-            </td>
-          </tr>
-          <tr>
-              <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-                  ${Space({ className: "newsletterBottom35px" })}
-              </td>
-          </tr>
-          <tr>
-            <td align="center" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                <tr>
-                  <td align="center" class="newsletterBottom35px">
-                    <span class="newsletterTitle">${queries.additionalt[0]}</span>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" class="newsletterProductContainerLast" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
-                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                    ${[0, 1].map(rowIndex => `
-                    <tr>
-                      ${[0, 1].map(colIndex => {
-                      const index = rowIndex * 2 + colIndex;
-                      if (!categories_add[index]) return "";
-                        return `
-                          ${AdditionalCategories({
-                            name: queries.additional[index],
-                            href: getCategoryLink(categories_add[index].href),
-                            src: categories_add[index].src,
-                          })}
-                        `;
-                      }).join("")}
-                    </tr>
-                    `).join("")}
-                </table>
-            </td>
-          </tr>
+                <td style="background-color: #ffcbb8;">
+                    ${MyIntro({
+                        href: links[0],
+                        src:  links[2],
+                        cathref: getCategoryLink(categories[0].href),
+                        paragraph1: queries.categories[0],
+                        paragraph2: queries.shopnow[0],
+                    })}
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #f6e7e6;">
+                    ${Timer({
+                        title: queries.timer[0],
+                        subtitle: queries.timer[1],
+                        href: links[5],
+                        imageSrc: timer_link[country],
+                        cta: queries.shopnow[0],
+                        insidehref: links[5],
+                        insidesrc: links[3],
+                    })}
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ffcbb8;">
+                    ${fCategory({
+                        name: queries.categories[1],
+                        desc: queries.categories[2],
+                        href: getCategoryLink(categories[0].href),
+                        cta: getPhrase("Shop now"),
+                        products: categories[0].products.map((item) =>
+                            getProductById(item.id, item.src)
+                      ),
+                    })}
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #ffcbb8;">
+                    ${sCategory({
+                        name: queries.categories[3],
+                        desc: queries.categories[4],
+                        href: getCategoryLink(categories[1].href),
+                        cta: getPhrase("Shop now"),
+                        products: categories[1].products.map((item) =>
+                            getProductById(item.id, item.src)
+                      ),
+                    })}
+                </td>
+            </tr>
         <tbody>
       </table>
       <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
@@ -264,18 +234,18 @@ export async function RegularWednesdayNslt({
                               </tr>
                               <tr>
                                   <td align="left" class="newsletterBottom20px">
-                                      <a href=${links[5]}>
+                                      <a href=${links[6]}>
                                           <img loading="lazy" src=${
-                                            links[6]
+                                            links[7]
                                           } style="display: block;" width="100%">
                                       </a>
                                   </td>
                               </tr>
                               <tr>
                                   <td align="left" class="newsletterBottom35px">
-                                      <a href=${links[7]}>
+                                      <a href=${links[8]}>
                                           <img loading="lazy" src=${
-                                            links[8]
+                                            links[9]
                                           } style="display: block;" width="100%">
                                       </a>
                                   </td>

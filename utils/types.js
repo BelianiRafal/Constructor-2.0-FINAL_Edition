@@ -88,6 +88,12 @@ export default {
             font-family: "Open Sans", sans-serif;
             line-height: 1.20;
           }
+
+          .timerParagraph {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+          }
           
           .newsletterTitleOfferPart {
             font-size: 30px;
@@ -258,6 +264,11 @@ export default {
             text-decoration: underline;
           }
 
+          .newsletterSubtitleTimer {
+            font-size: 30px; 
+            line-height: 1.25;
+          }
+
           .newsletterProductTitleContainer {
             padding-top: 35px;
           }
@@ -266,7 +277,9 @@ export default {
             background-color: #ffffff !important;
           }
           
-
+          .br {
+            display: block; 
+        }
           
           @media screen and (max-width: 768px) {
             .stack-column {
@@ -279,8 +292,17 @@ export default {
               height: auto !important;
             }
 
+            .br {
+    
+              display: contents;
+          }
+
             .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
+            }
+
+            .newsletterSubtitleTimer {
+              font-size: 20px !important;
             }
           
             .newsletterFooterCategoryRIGHTBottom {
@@ -389,6 +411,10 @@ export default {
           
             .newsletterParagraph {
               font-size: 16px;
+            }
+
+            .timerParagraph {
+              font-size: 27px;
             }
           
             .newsletterLeft10px {
@@ -1275,16 +1301,16 @@ export default {
             margin:0;
             }
 
-          #newsletter .newsletterTitleBirthH1 {
+          #newsletter .newsletterTitleH1Bold {
               font-size: 45px;
               line-height: 53px;
               font-weight: 600;
               margin:0;
             }
 
-            #newsletter .newsletterTitleBirthH2 {
+            #newsletter .newsletterTitleH1Bigger {
               font-size: 67px;
-              line-height: 53px;
+              line-height: 73px;
               font-weight: 600;
               margin:0;
             }
@@ -1375,6 +1401,12 @@ export default {
           
           #newsletter .newsletterParagraph {
             font-size: 18px;
+            line-height: 1.20;
+          }
+
+          #newsletter .timerParagraph {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
             line-height: 1.20;
           }
 
@@ -1514,6 +1546,11 @@ export default {
             font-size: 20px;
           }
 
+          #newsletter .newsletterSubtitleTimer {
+            font-size: 30px; 
+            line-height: 1.25;
+          }
+
           .newsletterProductContainer {
             padding-left: 20px !important;
             padding-right: 20px !important;
@@ -1545,6 +1582,10 @@ export default {
           .backgroundOne {
             background-color: #ffffff !important;
           }
+
+          .br {
+            display: block; 
+        }
           
           @media screen and (max-width: 768px) {
             #newsletter .stack-column {
@@ -1558,16 +1599,25 @@ export default {
               height: auto !important;
             }
 
+            .br {
+    
+              display: contents;
+          }
+
             #newsletter .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
 
-            #newsletter .newsletterTitleH1 {
-              font-size: 30px;
-              line-height: 35px;
+            #newsletter .newsletterSubtitleTimer {
+              font-size: 20px !important;
             }
 
-            #newsletter .newsletterTitleBirthH1 {
+            #newsletter .newsletterTitleH1 {
+              font-size: 30px;
+              line-height: 45px;
+            }
+
+            #newsletter .newsletterTitleH1Bold {
               font-size: 30px;
               line-height: 35px;
             }
@@ -1582,9 +1632,9 @@ export default {
               line-height: 27px;
             }
 
-            #newsletter .newsletterTitleBirthH2 {
+            #newsletter .newsletterTitleH1Bigger {
               font-size: 45px;
-              line-height: 50px;
+              line-height: 45px;
             }
 
             .newsletterProductContainer {
@@ -1697,6 +1747,10 @@ export default {
           
             #newsletter .newsletterParagraph {
               font-size: 16px;
+            }
+
+            #newsletter .timerParagraph {
+              font-size: 27px;
             }
 
             #newsletter .newsletterLeft5px {

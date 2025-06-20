@@ -37,6 +37,9 @@ import { GardenLP } from "./GardenLP.js";
 import { BirthdayNL } from "./Birthday.js";
 import { ParasolNL } from "./ParasolNL.js";
 import { ParasolLP } from "./ParasolLP.js";
+import { BirthdayWhiteNL } from "./BirthdayWhite.js";
+import { Side } from "./Side.js";
+import { SideLP } from "./SideLP.js";
 
 export const templates = {
   newsletter_FGG,
@@ -78,4 +81,7 @@ export const templates = {
   BirthdayNL,
   ParasolNL,
   ParasolLP,
+  BirthdayWhiteNL,
+  Side,
+  SideLP,
 };

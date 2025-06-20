@@ -14,6 +14,18 @@ function openCampaignHandler(id) {
   window.open(config.campaign_url + id, "_blank");
 }
 
+function openLpHandler(lpLinks, country) {
+  if (!lpLinks || !lpLinks[country]) {
+    Toastify({
+      text: `Select campaign.`,
+      escapeMarkup: false,
+      duration: 3000,
+    }).showToast();
+    return;
+  }
+  window.open(lpLinks[country], "_blank");
+}
+
 function openIssueHandler(id) {
   const config = getState("config");
 
@@ -39,9 +51,27 @@ function selectCampaignHandler(ev, campaigns) {
     }).showToast();
     return;
   }
-  const { startId, name, templates } = selectedCampaign;
-  setState("ids", incrementId(startId));
-  return { selectedCampaign, templates };
+
+  // Dla pewności pokaż całą kampanię w konsoli (do debugowania)
+  console.log("selectedCampaign z campaigns:", selectedCampaign);
+
+  // Ustawienie mapy inkrementowanych ID (do "Open campaign")
+  setState("ids", incrementId(selectedCampaign.startId));
+
+  // Ustawienie wybranej kampanii z najważniejszymi polami
+  setState("selectedCampaign", {
+    startId: selectedCampaign.startId,
+    name: selectedCampaign.name,
+    templates: selectedCampaign.templates,
+    lpId: selectedCampaign.lpId,
+    date: selectedCampaign.date,                // <-- Dodaj, jeśli chcesz
+    issueCardId: selectedCampaign.issueCardId,  // <-- Dodaj, jeśli chcesz
+    figmaUrl: selectedCampaign.figmaUrl,        // <-- Dodaj, jeśli chcesz
+    // Dodaj tutaj inne pola, których potrzebujesz!
+  });
+
+  // Zwróć całą kampanię i listę templatek
+  return { selectedCampaign, templates: selectedCampaign.templates };
 }
 
 function handleSlugChange(ev) {
@@ -59,6 +89,7 @@ export {
   handleSlugChange,
   selectCampaignHandler,
   openCampaignHandler,
+  openLpHandler,
   handleShopChange,
   openIssueHandler,
   figmaCardHandler

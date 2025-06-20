@@ -41,6 +41,12 @@ import { ProductFree } from "./productFree.js";
 import { OfferFree } from "./Offer.js";
 import { ProductFirst } from "./productFirst.js";
 import { OfferFreeLP } from "./OfferLP.js";
+import { CategoryThreeWhite } from "./categoryThreeWhite.js";
+import { MyIntro } from "./myintro.js";
+import { FreeTimer } from "./freetimer.js";
+import { fCategory } from "./firstcategory.js";
+import { sCategory } from "./secondcategory.js";
+import { BigProduct } from "./bigProduct.js";
 
 export {
   ProductWithSize,
@@ -86,4 +92,10 @@ export {
   ProductFirst,
   ImageWithLinkThree,
   OfferFreeLP,
+  CategoryThreeWhite,
+  MyIntro,
+  FreeTimer,
+  fCategory,
+  sCategory,
+  BigProduct,
 };

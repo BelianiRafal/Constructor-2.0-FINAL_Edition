@@ -186,7 +186,7 @@ export async function Modular({
             <tr>
                 <td align="center">
                     ${ImageWithLink({
-                        href: links[9],
+                        href: getCategoryLink(categories[0].href),
                         src: "https://upload.pictureserver.net/static/2025/2201_aprica.gif",
                     })}
                 </td>

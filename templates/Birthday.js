@@ -171,7 +171,7 @@ export async function BirthdayNL({
                         <tbody>
                             <tr>
                                 <td align="center">
-                                    <span class="newsletterParagraph" style="color: #000000">
+                                    <span class="newsletterParagraph" style="color: ${categories[0]?.color || "#000000"}">
                                         ${queries.intro}
                                     </span>
                                 </td>
@@ -306,35 +306,35 @@ export async function BirthdayNL({
             title: getFooter("Title"),
             firstCategory: {
               src: getFooter("Category src 1"),
-              href: getFooter("Category href 1"),
+              href: getCategoryLink("https://www.beliani.co.uk/sofas/all+products"),//href: getFooter("Category href 1"),
             },
             secondCategory: {
               src: getFooter("Category src 2"),
-              href: getFooter("Category href 2"),
+              href: getCategoryLink("https://www.beliani.co.uk/beds/all+products"),//href: getFooter("Category href 2"),
             },
             thirdCategory: {
               src: getFooter("Category src 3"),
-              href: getFooter("Category href 3"),
+              href: getCategoryLink("https://www.beliani.co.uk/tables/coffee-tables"),//href: getFooter("Category href 3"),
             },
             foutrthCategory: {
               src: getFooter("Category src 4"),
-              href: getFooter("Category href 4"),
+              href: getCategoryLink("https://www.beliani.co.uk/chairs/all+products"),//href: getFooter("Category href 4"),
             },
             fifthCategory: {
               src: getFooter("Category src 5"),
-              href: getFooter("Category href 5"),
+              href: getCategoryLink("https://www.beliani.co.uk/armchairs/all+products"),//href: getFooter("Category href 5"),
             },
             sixthCategory: {
               src: getFooter("Category src 6"),
-              href: getFooter("Category href 6"),
+              href: getCategoryLink("https://www.beliani.co.uk/storage/sideboards"),//href: getFooter("Category href 6"),
             },
             seventhCategory: {
               src: getFooter("Category src 7"),
-              href: getFooter("Category href 7"),
+              href: getCategoryLink("https://www.beliani.co.uk/lighting/all+products"),//href: getFooter("Category href 7"),
             },
             eigthCategory: {
               src: getFooter("Category src 8"),
-              href: getFooter("Category href 8"),
+              href: getCategoryLink("https://www.beliani.co.uk/rugs/all+products"),//href: getFooter("Category href 8"),
             },
           },
           klarna: {

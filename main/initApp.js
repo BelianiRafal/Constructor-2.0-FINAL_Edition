@@ -1,6 +1,7 @@
 import {
   selectCampaignHandler,
   openCampaignHandler,
+  openLpHandler,
   handleSlugChange,
   openIssueHandler,
   handleShopChange,
@@ -15,6 +16,7 @@ import { normalizeProducts } from "../utils/normalizeProducts.js";
 import { isQuotaExceededError } from "../helpers/isQuotaExceededError.js";
 import { computeValue } from "../helpers/computeValue.js";
 import { getTrackingUrl } from "../utils/geTrackingUrl.js";
+import { generateLpLinks } from "../helpers/generateLpLinks.js";
 
 const state = {
   queries: {},
@@ -62,6 +64,7 @@ export function initApp({ campaigns, shops, config }) {
   const openIssue = document.querySelector(".openIssue");
   const figmaCard = document.querySelector(".figmaCard");
   const clearStorage = document.querySelector(".clearStorage");
+  const openLP = document.querySelector('.openLP');
 
   setState("config", config);
   selectCampaigns.append(...initCampaigns(campaigns, config));
@@ -425,6 +428,27 @@ export function initApp({ campaigns, shops, config }) {
       ) {
         localStorage.clear();
       }
+    });
+    const countriesOrdering = [
+      "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL", "PT", "IT", "SE",
+      "HU", "DK", "CZ", "FI", "NO", "SK", "BENL", "BEFR", "RO"
+    ];
+
+    const openLP = document.querySelector('.openLP');
+    openLP?.addEventListener('click', () => {
+      const selectedCampaign = getState('selectedCampaign');
+      console.log('selectedCampaign', selectedCampaign);
+      if (!selectedCampaign.lpId) {
+        Toastify({
+          text: 'You not selected campaign or not set LP id in app.js.',
+          escapeMarkup: false,
+          duration: 3000,
+        }).showToast();
+        return;
+      }
+
+      const lpLinks = generateLpLinks(selectedCampaign.lpId, countriesOrdering, selectedCampaign.name);
+      openLpHandler(lpLinks, state.country);
     });
 
     const options = [];
