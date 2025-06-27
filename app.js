@@ -397,7 +397,7 @@ try {
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "09.07.25 - Small balcony!",
-                tableRange: "32:34",
+                tableRange: "33:34",
                 name: "condition",
                 fallback: [
                   'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
@@ -692,7 +692,7 @@ try {
               {
                 tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
                 tableName: "09.07.25 - Small balcony!",
-                tableRange: "32:34",
+                tableRange: "33:34",
                 name: "condition",
                 fallback: [
                   'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
@@ -1317,7 +1317,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
@@ -2205,7 +2205,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
@@ -4585,7 +4585,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns.",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/68F9elKyEOboiWtI33XB4h/Armchair---Wednesday-2025.04.02?node-id=0-1&p=f&t=uBbBblish7lCRnsQ-0",
