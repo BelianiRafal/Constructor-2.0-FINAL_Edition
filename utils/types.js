@@ -108,6 +108,13 @@ export default {
             font-weight: 600;
           }
 
+          .newsletterTitleAditional{
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
           .newsletterIntroTitle {
             font-size: 35px;
             font-family: "Open Sans", sans-serif;
@@ -375,6 +382,10 @@ export default {
             }
           
             .newsletterTitle {
+              font-size: 25px;
+            }
+
+            .newsletterTitleAditional{
               font-size: 25px;
             }
 
@@ -1422,6 +1433,12 @@ export default {
             font-weight: 600;
           }
 
+          #newsletter .newsletterTitleAditional {
+            font-size: 30px;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
           #newsletter .newsletterIntroTitle {
             font-size: 35px;
             line-height: 1.20;
@@ -1715,6 +1732,10 @@ export default {
             }
           
             #newsletter .newsletterTitle {
+              font-size: 25px;
+            }
+
+            #newsletter .newsletterTitleAditional{
               font-size: 25px;
             }
 

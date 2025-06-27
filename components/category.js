@@ -39,7 +39,7 @@ export const Category = isAllowToRender(
               <tbody>
                   <tr>
                       <td align="center">
-                          <span class="newsletterParagraph" style="color: #000000">
+                          <span class="newsletterParagraph" style="color: ${color}">
                               ${desc}
                           </span>
                       </td>
