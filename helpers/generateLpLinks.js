@@ -22,7 +22,7 @@ const countryLpOffsets = {
     RO: 18,
   };
   
-  export function generateLpLinks(lpId, countriesOrdering = null, campaignName = "") {
+  export function generateLpLinks(lpId, countriesOrdering = null, campaignName = "", specialLpIds = {}) {
     const countries = countriesOrdering ? countriesOrdering : Object.keys(countryLpOffsets);
     const shopIdMap = {
       CHDE: 1, CHFR: 1, UK: 2, DE: 3, FR: 7, AT: 8, ES: 10, PL: 12,
@@ -31,18 +31,13 @@ const countryLpOffsets = {
     };
     const links = {};
     countries.forEach(country => {
-      // WYJĄTEK dla kampanii "02.07.25 - Sofas"
-      if (campaignName === "02.07.25 - Sofas") {
-        if (country === "BENL" || country === "BEFR") {
-          links[country] = `https://www.prologistics.info/shop_content.php?id=25503&shop_id=19`;
-          return;
-        }
-        if (country === "RO") {
-          links[country] = `https://www.prologistics.info/shop_content.php?id=25504&shop_id=30`;
-          return;
-        }
+      // Jeśli jest specialLpId dla kraju – użyj go:
+      if (specialLpIds && specialLpIds[country]) {
+        const shopId = shopIdMap[country];
+        links[country] = `https://www.prologistics.info/shop_content.php?id=${specialLpIds[country]}&shop_id=${shopId}`;
+        return;
       }
-      // Standardowe generowanie
+      // Standardowo:
       const currentLpId = Number(lpId) + countryLpOffsets[country];
       const shopId = shopIdMap[country];
       links[country] = `https://www.prologistics.info/shop_content.php?id=${currentLpId}&shop_id=${shopId}`;

@@ -64,6 +64,7 @@ function selectCampaignHandler(ev, campaigns) {
     name: selectedCampaign.name,
     templates: selectedCampaign.templates,
     lpId: selectedCampaign.lpId,
+    specialLpIds: selectedCampaign.specialLpIds,
     date: selectedCampaign.date,                // <-- Dodaj, jeśli chcesz
     issueCardId: selectedCampaign.issueCardId,  // <-- Dodaj, jeśli chcesz
     figmaUrl: selectedCampaign.figmaUrl,        // <-- Dodaj, jeśli chcesz

@@ -447,7 +447,10 @@ export function initApp({ campaigns, shops, config }) {
         return;
       }
 
-      const lpLinks = generateLpLinks(selectedCampaign.lpId, countriesOrdering, selectedCampaign.name);
+      console.log("selectedCampaign:", selectedCampaign);
+      console.log("specialLpIds:", selectedCampaign.specialLpIds);
+
+      const lpLinks = generateLpLinks(selectedCampaign.lpId, countriesOrdering, selectedCampaign.name, selectedCampaign.specialLpIds);
       openLpHandler(lpLinks, state.country);
     });
 

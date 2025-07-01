@@ -1,6 +1,7 @@
 export class Campaign {
   startId;
   lpId;
+  specialLpIds;
   name;
   date;
   alarm;
@@ -21,6 +22,7 @@ export class Campaign {
     optimizeImg,
     startId,
     lpId,
+    specialLpIds = null,
     templates,
     figmaUrl,
   }) {
@@ -51,6 +53,7 @@ export class Campaign {
     this.name = name;
     this.startId = startId;
     this.lpId = lpId || null;
+    this.specialLpIds = specialLpIds || null;
     this.templates = templates;
     this.alarm = {
       isActive: alarm?.isActive || false,

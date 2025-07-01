@@ -145,7 +145,7 @@ export async function RegularWednesdayNslt({
                           title1: queries.tit[0],
                           title2: queries.tit[1],
                           color: "#000000",
-                          type: "up_to",
+                          type: "twoSameLines",
                         })}
                       `
                       }
@@ -215,7 +215,7 @@ export async function RegularWednesdayNslt({
               <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
                 <tr>
                   <td align="center" class="newsletterBottom35px">
-                    <span class="newsletterTitle">${queries.additionalt[0]}</span>
+                    <span class="newsletterTitleAditional">${queries.additionalt[0]}</span>
                   </td>
                 </tr>
               </table>
