@@ -313,24 +313,6 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-07-11",
-                },
-              },
-              {
-                src: {
-                  type: "relation",
-                  relyOn: "slug",
-                  placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250711b.png", true),
-                },
-              },
-              {
-                query: true,
-                href: {
-                  type: "relation",
-                  relyOn: "origin",
-                  placeholderPosition: "0",
                   value: "content/lp25-07-09",
                 },
               },
@@ -341,6 +323,24 @@ try {
                   placeholderPosition: "38",
                   value:
                     getImageUrl("20250709b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250704b.png", true),
                 },
               },
               {
@@ -602,24 +602,6 @@ try {
                   type: "relation",
                   relyOn: "origin",
                   placeholderPosition: "0",
-                  value: "content/lp25-07-11",
-                },
-              },
-              {
-                src: {
-                  type: "relation",
-                  relyOn: "slug",
-                  placeholderPosition: "38",
-                  value:
-                    getImageUrl("20250711b.png", true),
-                },
-              },
-              {
-                query: true,
-                href: {
-                  type: "relation",
-                  relyOn: "origin",
-                  placeholderPosition: "0",
                   value: "content/lp25-07-09",
                 },
               },
@@ -630,6 +612,24 @@ try {
                   placeholderPosition: "38",
                   value:
                     getImageUrl("20250709b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-04",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250704b.png", true),
                 },
               },
               {
