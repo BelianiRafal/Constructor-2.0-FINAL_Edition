@@ -103,9 +103,615 @@ try {
     campaigns: [
 
       new entities.Campaign({
+        startId: "35316",
+        lpId: "25884",
+        name: "23.07.25 - Tables",
+        version: "new",
+        specialLpIds: {
+
+        },
+        date: "2025.07.23",
+        issueCardId: "381834",
+        alarm: {
+          isActive: false,
+          description: "Add soon ending campaigns. XXXX",
+        },
+        isArchive: false,
+        optimizeImg: false,
+        figmaUrl:
+          "https://www.figma.com/design/qUmwTYmAdlgLtixlAp4fmm/Small-balcony---Wednesday-2025.07.09--Copy-?m=auto&fuid=1328681953229888224",
+        templates: [
+          {
+            name: "Newsletter",
+            type: types.NEWSLETTER,
+            template: templates.RegularWednesdayNslt,
+            css: types.CSS.NS,
+            background: "#FECD8C",
+            wrapper: types.WRAPPER,
+            categories: [
+              {
+                name: "Balcony set",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FECD8C",
+                color: "#000000",
+                src: getImageUrl("20250723category_01.png", true),
+                href: "https://www.beliani.ch/tables/dining-tables/",
+                products: [
+                  {
+                    id: "18491",
+                    src: getImageUrl("20250723product_01.png", true),
+                  },
+                  {
+                    id: "447193",
+                    src: getImageUrl("20250723product_02.png", true),
+                  },
+                  {
+                    id: "609003",
+                    src: getImageUrl("20250723product_03.png", true),
+                  },
+                  {
+                    id: "310164",
+                    src: getImageUrl("20250723product_04.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Hanging chairs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFE6DB",
+                color: "#000000",
+                src: getImageUrl("20250723category_02.png", true),
+                href: "https://www.beliani.ch/tables/coffee-tables/",
+                products: [
+                  {
+                    id: "449670",
+                    src: getImageUrl("20250723product_05.png", true),
+                  },
+                  {
+                    id: "622146",
+                    src: getImageUrl("20250723product_06.png", true),
+                  },
+                  {
+                    id: "321239",
+                    src: getImageUrl("20250723product_07.png", true),
+                  },
+                  {
+                    id: "571047",
+                    src: getImageUrl("20250723product_08.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Rugs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FECD8C",
+                color: "#000000",
+                src: getImageUrl("20250723category_03.png", true),
+                href: "https://www.beliani.ch/tables/console-tables/",
+                products: [
+                  {
+                    id: "433272",
+                    src: getImageUrl("20250723product_09.png", true),
+                  },
+                  {
+                    id: "354975",
+                    src: getImageUrl("20250723product_10.png", true),
+                  },
+                  {
+                    id: "336951",
+                    src: getImageUrl("20250723product_11.png", true),
+                  },
+                  {
+                    id: "317396",
+                    src: getImageUrl("20250723product_12.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Outdoor cushions",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFE6DB",
+                color: "#000000",
+                src: getImageUrl("20250723category_04.png", true),
+                href: "https://www.beliani.ch/tables/side-tables/",
+                products: [
+                  {
+                    id: "504477",
+                    src: getImageUrl("20250723product_13.png", true),
+                  },
+                  {
+                    id: "379952",
+                    src: getImageUrl("20250723product_14.png", true),
+                  },
+                  {
+                    id: "611588",
+                    src: getImageUrl("20250723product_15.png", true),
+                  },
+                  {
+                    id: "621489",
+                    src: getImageUrl("20250723product_16.png", true),
+                  },
+                ],
+              },
+            ],
+            categories_add: [
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/sofas/",
+                src: getImageUrl("20250723category_05.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/armchairs/",
+                src: getImageUrl("20250723category_06.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/chairs/",
+                src: getImageUrl("20250723category_07.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/accessories-decor/vases/",
+                src: getImageUrl("20250723category_08.png", true),
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-23",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250723_01.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "45",
+                  value:
+                    getImageUrl("250319video.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-03",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("250319inside.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-16",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250716b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-11",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250711b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-18",
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "search/lemvig/",
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "18:25",
+                name: "categories",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "35",
+                name: "additionalt",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "26:29",
+                name: "additional",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "30",
+                name: "shopnow",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "39:40",
+                name: "condition",
+                fallback: [
+                  'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
+                  'If you wish to unsubscribe from the newsletter, you can do so by clicking on the <a href="[[newsunassignurl]]"style="text-decoration:none;color:#000000;">Unsubscribe</a> link.'
+                ]
+              },
+            ],
+          },
+          {
+            name: "Landing",
+            type: types.LANDINGPAGE,
+            template: templates.RegularWednesdayNslt,
+            background: "#FEE3BF",
+            topImageColor: "#FEE3BF",
+            css: types.CSS.LP,
+            categories: [
+              {
+                name: "Balcony set",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FECD8C",
+                color: "#000000",
+                src: getImageUrl("20250723category_01.png", true),
+                href: "https://www.beliani.ch/tables/dining-tables/",
+                products: [
+                  {
+                    id: "18491",
+                    src: getImageUrl("20250723product_01.png", true),
+                  },
+                  {
+                    id: "447193",
+                    src: getImageUrl("20250723product_02.png", true),
+                  },
+                  {
+                    id: "609003",
+                    src: getImageUrl("20250723product_03.png", true),
+                  },
+                  {
+                    id: "310164",
+                    src: getImageUrl("20250723product_04.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Hanging chairs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFE6DB",
+                color: "#000000",
+                src: getImageUrl("20250723category_02.png", true),
+                href: "https://www.beliani.ch/tables/coffee-tables/",
+                products: [
+                  {
+                    id: "449670",
+                    src: getImageUrl("20250723product_05.png", true),
+                  },
+                  {
+                    id: "622146",
+                    src: getImageUrl("20250723product_06.png", true),
+                  },
+                  {
+                    id: "321239",
+                    src: getImageUrl("20250723product_07.png", true),
+                  },
+                  {
+                    id: "571047",
+                    src: getImageUrl("20250723product_08.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Rugs",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FECD8C",
+                color: "#000000",
+                src: getImageUrl("20250723category_03.png", true),
+                href: "https://www.beliani.ch/tables/console-tables/",
+                products: [
+                  {
+                    id: "433272",
+                    src: getImageUrl("20250723product_09.png", true),
+                  },
+                  {
+                    id: "354975",
+                    src: getImageUrl("20250723product_10.png", true),
+                  },
+                  {
+                    id: "336951",
+                    src: getImageUrl("20250723product_11.png", true),
+                  },
+                  {
+                    id: "317396",
+                    src: getImageUrl("20250723product_12.png", true),
+                  },
+                ],
+              },
+              {
+                name: "Outdoor cushions",
+                desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                background: "#FFE6DB",
+                color: "#000000",
+                src: getImageUrl("20250723category_04.png", true),
+                href: "https://www.beliani.ch/tables/side-tables/",
+                products: [
+                  {
+                    id: "504477",
+                    src: getImageUrl("20250723product_13.png", true),
+                  },
+                  {
+                    id: "379952",
+                    src: getImageUrl("20250723product_14.png", true),
+                  },
+                  {
+                    id: "611588",
+                    src: getImageUrl("20250723product_15.png", true),
+                  },
+                  {
+                    id: "621489",
+                    src: getImageUrl("20250723product_16.png", true),
+                  },
+                ],
+              },
+            ],
+            categories_add: [
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/sofas/",
+                src: getImageUrl("20250723category_05.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/armchairs/",
+                src: getImageUrl("20250723category_06.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/chairs/",
+                src: getImageUrl("20250723category_07.png", true),
+              },
+              {
+                background: "#ffffff",
+                color: "#000000",
+                href: "https://www.beliani.ch/accessories-decor/vases/",
+                src: getImageUrl("20250723category_08.png", true),
+              },
+            ],
+            links: [
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-23",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250723_01.png", true),
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "45",
+                  value:
+                    getImageUrl("250319video.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-03",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("250319inside.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-16",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250716b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-07-11",
+                },
+              },
+              {
+                src: {
+                  type: "relation",
+                  relyOn: "slug",
+                  placeholderPosition: "38",
+                  value:
+                    getImageUrl("20250711b.png", true),
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "content/lp25-03-18",
+                },
+              },
+              {
+                query: true,
+                href: {
+                  type: "relation",
+                  relyOn: "origin",
+                  placeholderPosition: "0",
+                  value: "search/lemvig/",
+                },
+              },
+            ],
+            tableQueries: [
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "15:16",
+                name: "tit"
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "18:25",
+                name: "categories",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "35",
+                name: "additionalt",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "26:29",
+                name: "additional",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "30",
+                name: "shopnow",
+                fallback: [
+                  "This is time limited offer. Valid only until 27th of October.",
+                ]
+              },
+              {
+                tableId: "1djnjfhsFX4-Fghv5cQU_UNYaEhVL9Ban4VUqIfHsWdc",
+                tableName: "23.07.25 - Tables!",
+                tableRange: "39:40",
+                name: "condition",
+                fallback: [
+                  'All items are subject to availability. All prices are correct as of dd.mm.yyyy and are subject to change without notification.',
+                  'If you wish to unsubscribe from the newsletter, you can do so by clicking on the <a href="[[newsunassignurl]]"style="text-decoration:none;color:#000000;">Unsubscribe</a> link.'
+                ]
+              },
+            ],
+          },
+        ],
+      }),
+      new entities.Campaign({
         startId: "34996",
         lpId: "25730",
         name: "16.07.25 - Relax in the garden",
+        version: "old",
         specialLpIds: {
           BENL: "25503",
           BEFR: "25503",
@@ -718,7 +1324,7 @@ try {
           isActive: false,
           description: "Add soon ending campaigns. XXXX",
         },
-        isArchive: false,
+        isArchive: true,
         optimizeImg: false,
         figmaUrl:
           "https://www.figma.com/design/qUmwTYmAdlgLtixlAp4fmm/Small-balcony---Wednesday-2025.07.09--Copy-?m=auto&fuid=1328681953229888224",

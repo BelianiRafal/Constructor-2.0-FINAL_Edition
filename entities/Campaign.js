@@ -11,6 +11,7 @@ export class Campaign {
   isArchive;
   products;
   figmaUrl;
+  version;
   constructor({
     date,
     data,
@@ -25,6 +26,7 @@ export class Campaign {
     specialLpIds = null,
     templates,
     figmaUrl,
+    version = "old",
   }) {
     if (!Array.isArray(templates)) {
       throw new Error("templates property should be array");
@@ -64,5 +66,6 @@ export class Campaign {
     this.isArchive = isArchive || false;
     this.products = products || null;
     this.figmaUrl = figmaUrl || null;
+    this.version = version || "old";
   }
 }

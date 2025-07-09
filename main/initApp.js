@@ -450,7 +450,29 @@ export function initApp({ campaigns, shops, config }) {
       console.log("selectedCampaign:", selectedCampaign);
       console.log("specialLpIds:", selectedCampaign.specialLpIds);
 
-      const lpLinks = generateLpLinks(selectedCampaign.lpId, countriesOrdering, selectedCampaign.name, selectedCampaign.specialLpIds);
+      const countryOrderOld = [
+        "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL", "PT",
+        "IT", "SE", "HU", "DK", "CZ", "FI", "NO", "SK", "BENL", "BEFR", "RO"
+      ];
+      
+      const countryOrderNew = [
+        "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL",
+        "BENL", "BEFR", "PT", "IT", "SE", "HU", "DK", "CZ", "FI", "NO", "SK", "RO"
+      ];
+      
+      const selectedCountryOrder = selectedCampaign.version === "new"
+        ? countryOrderNew
+        : countryOrderOld;
+
+      console.log("selectedCampaign.version:", selectedCampaign.version);
+      console.log("selectedCountryOrder:", selectedCountryOrder);
+      
+      const lpLinks = generateLpLinks(
+        selectedCampaign.lpId,
+        selectedCountryOrder,
+        selectedCampaign.name,
+        selectedCampaign.specialLpIds
+      );
       openLpHandler(lpLinks, state.country);
     });
 

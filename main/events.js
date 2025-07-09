@@ -56,7 +56,7 @@ function selectCampaignHandler(ev, campaigns) {
   console.log("selectedCampaign z campaigns:", selectedCampaign);
 
   // Ustawienie mapy inkrementowanych ID (do "Open campaign")
-  setState("ids", incrementId(selectedCampaign.startId));
+  setState("ids", incrementId(selectedCampaign.startId, selectedCampaign.version || "old"));
 
   // Ustawienie wybranej kampanii z najważniejszymi polami
   setState("selectedCampaign", {
@@ -68,6 +68,7 @@ function selectCampaignHandler(ev, campaigns) {
     date: selectedCampaign.date,                // <-- Dodaj, jeśli chcesz
     issueCardId: selectedCampaign.issueCardId,  // <-- Dodaj, jeśli chcesz
     figmaUrl: selectedCampaign.figmaUrl,        // <-- Dodaj, jeśli chcesz
+    version: selectedCampaign.version || "old",
     // Dodaj tutaj inne pola, których potrzebujesz!
   });
 

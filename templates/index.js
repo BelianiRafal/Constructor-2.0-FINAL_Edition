@@ -28,7 +28,7 @@ import { HallwayLP } from "./HallwayLP.js";
 import { Rugs } from "./Rugs.js";
 import { Living } from "./Living.js";
 import { Office } from "./Office.js";
-import { RegularWednesdayNslt } from "./test.js";
+import { RegularWednesdayNslt } from "./Wednesday.js";
 import { FrenchDays } from "./french.js";
 import { GardenMayNL } from "./0705nl.js";
 import { GardenMayLP } from "./0705lp.js";
