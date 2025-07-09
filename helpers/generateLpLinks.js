@@ -8,32 +8,42 @@ export function generateLpLinks(lpId, countriesOrdering = null, campaignName = "
     NL: 17, PT: 22, IT: 21, SE: 23, HU: 24, DK: 25, CZ: 26, FI: 27,
     NO: 28, SK: 29, BENL: 19, BEFR: 19, RO: 30,
   };
-  const zeroOffsetCountries = ["CHDE", "CHFR"];
-  const links = {};
-  let sharedOffsetAssigned = false; // Czy już był CHDE lub CHFR z offsetem 0
-  let offsetCounter = 0;
 
-  countries.forEach((country) => {
+  // Grupy krajów ze wspólnym offsetem
+  const sharedOffsetGroups = [
+    ["CHDE", "CHFR"],
+    ["BENL", "BEFR"]
+  ];
+
+  const countryOffsets = {};
+  let offset = 0;
+
+  for (let i = 0; i < countries.length; i++) {
+    const country = countries[i];
+    const group = sharedOffsetGroups.find(g => g.includes(country));
+    if (group) {
+      // Jeśli żaden kraj z grupy nie ma jeszcze offsetu
+      const assigned = group.find(c => countryOffsets[c] !== undefined);
+      if (assigned) {
+        countryOffsets[country] = countryOffsets[assigned];
+      } else {
+        group.forEach(c => countryOffsets[c] = offset);
+        offset++; // Inkrementuj offset tylko raz dla całej grupy!
+      }
+    } else {
+      countryOffsets[country] = offset;
+      offset++;
+    }
+  }
+
+  const links = {};
+  countries.forEach(country => {
     if (specialLpIds && specialLpIds[country]) {
       const shopId = shopIdMap[country];
       links[country] = `https://www.prologistics.info/shop_content.php?id=${specialLpIds[country]}&shop_id=${shopId}`;
       return;
     }
-
-    let offset;
-    if (zeroOffsetCountries.includes(country)) {
-      if (!sharedOffsetAssigned) {
-        offset = 0;
-        sharedOffsetAssigned = true;
-      } else {
-        offset = 0;
-      }
-    } else {
-      offsetCounter++;
-      offset = offsetCounter;
-    }
-
-    const currentLpId = Number(lpId) + offset;
+    const currentLpId = Number(lpId) + countryOffsets[country];
     const shopId = shopIdMap[country];
     links[country] = `https://www.prologistics.info/shop_content.php?id=${currentLpId}&shop_id=${shopId}`;
   });

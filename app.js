@@ -713,9 +713,7 @@ try {
         name: "16.07.25 - Relax in the garden",
         version: "old",
         specialLpIds: {
-          BENL: "25503",
-          BEFR: "25503",
-          RO: "25504",
+
         },
         date: "2025.07.16",
         issueCardId: "379074",
