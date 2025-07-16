@@ -10,6 +10,7 @@ export const Category = isAllowToRender(
     products,
     ctaComponent,
     color,
+    lastbottomclass,
     cta = "CTA",
     type = "wednesday",
   }) => {
@@ -114,7 +115,7 @@ export const Category = isAllowToRender(
         </td>
       </tr>
       <tr>
-        <td class="newsletterBottom80px">
+        <td class="${lastbottomclass}">
           <table cellspacing="0" cellpadding="0" style="width: 100%; ">
             <tbody>
               <tr>

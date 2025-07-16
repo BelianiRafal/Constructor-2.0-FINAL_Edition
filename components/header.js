@@ -1,5 +1,5 @@
 import types from "../utils/types.js";
-
+import {getImageUrl} from "../app.js";
 export function Header(sections, options) {
   const json_header = {
     advantages: {
@@ -39,7 +39,7 @@ export function Header(sections, options) {
                         <tr>
                             <th>
                                 <a href="${topImage.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}">
-                                    <img src="${topImage.src}" border="0" alt="Beliani" style="display:block; max-width: 100%;" />
+                                    <img src="${getImageUrl(topImage.src, true)}" border="0" alt="Beliani" style="display:block; max-width: 100%;" />
                                 </a>
                             </th>
                         </tr>
@@ -62,15 +62,15 @@ export function Header(sections, options) {
                         <tr>
                             <th><a
                                     href="${firstCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${firstCategory.src}" border="0"
+                                        src="${getImageUrl(firstCategory.src, true)}" border="0"
                                         alt="M&ouml;bel" style="display:block; max-width: 100%;" /></a></th>
                             <th><a
                                     href="${secondCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${secondCategory.src}" border="0"
+                                        src="${getImageUrl(secondCategory.src, true)}" border="0"
                                         alt="Accessoires" style="display:block; max-width: 100%;" /></a></th>
                             <th><a
                                     href="${thirdCategory.href}?utm_source=newsletter&utm_medium=email&utm_campaign=${sections.id}"><img
-                                        src="${thirdCategory.src}" border="0"
+                                        src="${getImageUrl(thirdCategory.src, true)}" border="0"
                                         alt="Garten" style="display:block; max-width: 100%;" /></a></th>
                         </tr>
                     </tbody>

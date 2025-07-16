@@ -79,8 +79,16 @@ export default {
             padding-bottom: 35px;
           }
 
+          .newsletterBottom40px {
+            padding-bottom: 40px;
+          }
+
           .newsletterBottom60px {
             padding-bottom: 60px;
+          }
+
+          .newsletterBottom70px {
+            padding-bottom: 70px;
           }
           
           .newsletterParagraph {
@@ -108,11 +116,11 @@ export default {
             font-weight: 600;
           }
 
-          .newsletterTitleAditional{
-            font-size: 30px;
+          .newsletterTitleAdditional{
+            font-size: 27px;
             font-family: "Open Sans", sans-serif;
-            line-height: 1.20;
-            font-weight: 400;
+            line-height: 1.25;
+            text-decoration: underline;
           }
 
           .newsletterIntroTitle {
@@ -143,7 +151,7 @@ export default {
           }
           
           .newsletterRight10px {
-            padding-right: 10px;
+            padding-right: 10px !important;
           }
 
           .newsletterRight02px {
@@ -159,7 +167,7 @@ export default {
           }
           
           .newsletterLeft10px {
-            padding-left: 10px;
+            padding-left: 10px !important;
           }
 
           .newsletterLeft5px {
@@ -271,6 +279,13 @@ export default {
             text-decoration: underline;
           }
 
+          .newsletterAditionalTitle {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
           .newsletterSubtitleTimer {
             font-size: 30px; 
             line-height: 1.25;
@@ -306,6 +321,10 @@ export default {
 
             .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
+            }
+
+            .newsletterAditionalTitle {
+              font-size: 25px;
             }
 
             .newsletterSubtitleTimer {
@@ -385,8 +404,8 @@ export default {
               font-size: 25px;
             }
 
-            .newsletterTitleAditional{
-              font-size: 25px;
+            .newsletterTitleAdditional {
+              font-size: 16px !important;
             }
 
             .newsletterIntroTitle {
@@ -416,8 +435,16 @@ export default {
               padding-bottom: 20px;
             }
 
+            .newsletterBottom40px {
+              padding-bottom: 25px;
+            }
+
             .newsletterBottom60px {
               padding-bottom: 40px;
+            }
+
+            .newsletterBottom70px {
+              padding-bottom: 50px;
             }
           
             .newsletterParagraph {
@@ -429,7 +456,7 @@ export default {
             }
           
             .newsletterLeft10px {
-              padding-left: 5px;
+              padding-left: 5px !important;
             }
 
             .newsletterLeft20px {
@@ -442,7 +469,7 @@ export default {
             }
           
             .newsletterRight10px {
-              padding-right: 5px;
+              padding-right: 5px !important;
             }
 
             .newsletterRight02px {
@@ -1350,6 +1377,22 @@ export default {
             margin-bottom: 10px;
             margin-top: 10px;
           }
+
+          #newsletter .newsletterAditionalTitle {
+            font-size: 30px;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
+          #newsletter .newsletterTitleAdditional{
+            font-size: 27px;
+            line-height: 1.25;
+            text-decoration: underline;
+          }
+
+          #newsletter .newsletterBottom70px {
+            padding-bottom: 70px;
+          }
           
           /* NEWSLETTER START */
           
@@ -1404,6 +1447,10 @@ export default {
           
           #newsletter .newsletterBottom35px {
             padding-bottom: 35px;
+          }
+
+          #newsletter .newsletterBottom40px {
+            padding-bottom: 40px;
           }
 
           #newsletter .newsletterBottom60px {
@@ -1468,11 +1515,11 @@ export default {
           }
           
           #newsletter .newsletterRight10px {
-            padding-right: 10px;
+            padding-right: 10px !important;
           }
           
           #newsletter .newsletterLeft10px {
-            padding-left: 10px;
+            padding-left: 10px !important;
           }
 
           #newsletter .newsletterRight02px {
@@ -1634,6 +1681,18 @@ export default {
               line-height: 45px;
             }
 
+            #newsletter .newsletterTitleAdditional {
+              font-size: 16px !important;
+            }
+
+            #newsletter .newsletterAditionalTitle {
+              font-size: 25px;
+            }
+
+            #newsletter .newsletterBottom70px {
+            padding-bottom: 50px;
+          }
+
             #newsletter .newsletterTitleH1Bold {
               font-size: 30px;
               line-height: 35px;
@@ -1762,6 +1821,10 @@ export default {
               padding-bottom: 20px;
             }
 
+            #newsletter .newsletterBottom40px {
+              padding-bottom: 25px;
+            }
+
             #newsletter .newsletterBottom60px {
               padding-bottom: 40px;
             }
@@ -1783,7 +1846,7 @@ export default {
             }
           
             #newsletter .newsletterLeft10px {
-              padding-left: 5px;
+              padding-left: 5px !important;
             }
 
             #newsletter .newsletterLeft20px {
@@ -1796,7 +1859,7 @@ export default {
             }
           
             #newsletter .newsletterRight10px {
-              padding-right: 5px;
+              padding-right: 5px !important;
             }
 
             #newsletter .newsletterRight02px {
