@@ -48,9 +48,11 @@ import { fCategory } from "./firstcategory.js";
 import { sCategory } from "./secondcategory.js";
 import { BigProduct } from "./bigProduct.js";
 import {ColumnsTwoPeak} from './ColumnsTwoPeak.js';
+import {shopNow} from './shopNow.js';
 
 export {
   ProductWithSize,
+  shopNow,
   ColumnsTwoPeak,
   Space,
   Paragraph,

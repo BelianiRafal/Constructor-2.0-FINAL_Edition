@@ -28,7 +28,8 @@ import { HallwayLP } from "./HallwayLP.js";
 import { Rugs } from "./Rugs.js";
 import { Living } from "./Living.js";
 import { Office } from "./Office.js";
-import { RegularWednesdayNslt } from "./Wednesday.js";
+import { RegularWednesdayNslt } from "./RegularWednesdayNslt.js";
+// import { RegularWednesdayNslt } from "./RegularWednesdayNslt.js";
 import { FrenchDays } from "./french.js";
 import { GardenMayNL } from "./0705nl.js";
 import { GardenMayLP } from "./0705lp.js";
@@ -40,9 +41,15 @@ import { ParasolLP } from "./ParasolLP.js";
 import { BirthdayWhiteNL } from "./BirthdayWhite.js";
 import { Side } from "./Side.js";
 import { SideLP } from "./SideLP.js";
+import {mondayRegularNslt} from './mondayRegularNslt.js';
+import {fridayDziwnyNsltr} from './fridayDziwnyNsltr.js';
+import {product_of_the_month} from './product_of_the_month.js';
 
 export const templates = {
   newsletter_FGG,
+  product_of_the_month,
+  mondayRegularNslt,
+  fridayDziwnyNsltr,
   landing_FGG,
   AdventCalendar,
   CategoriesRowsOfferPart,

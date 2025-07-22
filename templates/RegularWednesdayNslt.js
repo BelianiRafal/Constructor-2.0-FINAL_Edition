@@ -12,9 +12,6 @@ import {
   Timer,
   TopImageTitle,
   AdditionalCategories,
-  CategoryOneBannerWhite,
-  CategoryOneBanner,
-  CategoryOneLast,
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -67,6 +64,7 @@ export async function RegularWednesdayNslt({
     NO: [""],
     SK: [""],
   };
+  
   return `
   ${Header(
     {
@@ -143,14 +141,14 @@ export async function RegularWednesdayNslt({
                           href: links[0],
                           title1: queries.tit[0],
                           title2: queries.tit[1],
-                          color: "#ffffff",
+                          color: "#000",
                           type: "up_to",
                         })}
                       `
                       }
                     </td>
                 </tr>
-                  
+
               `
             }
             <tr>
@@ -158,42 +156,32 @@ export async function RegularWednesdayNslt({
               <tbody>
                 ${categories
                   .map((item, index) => {
-                    console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
+                    const isLast = index === categories.length - 1; // Czy to ostatnia kategoria?
+                    const background = item.background;
+                    const color = item.color;
+                    const srcValue = item.src?.value || "";
           
-                    const isLast = index === categories.length - 1; // Sprawdzenie, czy to ostatni element
-                    const background = item.background; // Domyślny kolor tła
-                    const color = item.color; // Domyślny kolor tekstu
-                    const srcValue = item.src?.value || ""; // Pobranie `value`, jeśli istnieje
-          
-                    // Pobieranie poprawnego indeksu dla `queries.categories`
-                    const dataIndex = index * 2; 
-                    if (dataIndex >= queries.categories.length) return ""; // Zabezpieczenie przed wyjściem poza zakres
+                    const dataIndex = index * 2;
+                    if (dataIndex >= queries.categories.length) return "";
           
                     const title = queries.categories[dataIndex] || "Default Title";
                     const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-                    
-                    // Wybór komponentu na podstawie pozycji (pierwszy, ostatni, inny)
-                    let categoryComponent;
-                    if (index === 0) {
-                      categoryComponent = CategoryOneBanner; // Używamy CategoryOneBanner dla pierwszej kategorii
-                    } else if (index === 3) {
-                      categoryComponent = CategoryOneLast; // Używamy CategoryOneLast dla ostatniej kategorii
-                    } else {
-                      categoryComponent = Category; // Dla pozostałych używamy Category
-                    }
           
+                    // Ustal właściwą wartość lastbottomclass
+                    const lastbottomclass = isLast ? "newsletterBottom40px" : "newsletterBottom80px";
+          
+                    // Używamy TYLKO komponentu Category
                     return `
                       <tr>
                         <td style="background-color: ${background}; color: ${color};">
-                          ${categoryComponent({
-                            data: [title, paragraph], // Przekazanie poprawnej pary danych
+                          ${Category({
+                            data: [title, paragraph],
                             href: getCategoryLink(item.href),
                             name: title,
                             color: item.color,
                             desc: paragraph,
                             src: item.src,
-                            hrefSecond: links[3],
-                            srcSecond: links[4],
+                            lastbottomclass,
                             cta: getPhrase("Shop now"),
                             type: "wednesday",
                             products: item.products?.map((product) =>
@@ -209,40 +197,47 @@ export async function RegularWednesdayNslt({
             </td>
           </tr>
           <tr>
-              <td style="background-color: #ffffff;">
-                  ${Space({ className: "newsletterBottom35px" })}
+              <td style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+                  ${Space({ className: "newsletterBottom40px" })}
               </td>
           </tr>
           <tr>
-            <td align="center" style="background-color: #ffffff;">
+            <td align="center" class="newsletterContainer" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
               <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
                 <tr>
                   <td align="center" class="newsletterBottom35px">
-                    <span class="newsletterTitle">${queries.additionalt[0]}</span>
+                    <span class="newsletterAditionalTitle">${queries.additionalt[0]}</span>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
           <tr>
-            <td align="center" class="newsletterProductContainerLast" style="background-color: #ffffff;">
-                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
-                    ${[0, 1].map(rowIndex => `
+            <td align="center" class="newsletterContainer" style="background-color: ${categories[4]?.background || "#ffffff"}; color: ${categories[4]?.color || "#000000"}">
+              <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+                ${
+                  [0, 1].map(rowIndex => `
                     <tr>
-                      ${[0, 1].map(colIndex => {
-                      const index = rowIndex * 2 + colIndex;
-                      if (!categories_add[index]) return "";
-                        return `
-                          ${AdditionalCategories({
-                            name: queries.additional[index],
-                            href: getCategoryLink(categories_add[index].href),
-                            src: categories_add[index].src,
-                          })}
-                        `;
-                      }).join("")}
+                      ${
+                        [0, 1].map(colIndex => {
+                          const index = rowIndex * 2 + colIndex;
+                          if (!categories_add[index]) return "";
+                          // Ustalanie wartości paddingside na podstawie index
+                          const paddingside = (index === 0 || index === 2) ? "newsletterRight10px" : "newsletterLeft10px";
+                          return `
+                            ${AdditionalCategories({
+                              name: queries.additional[index],
+                              href: getCategoryLink(categories_add[index].href),
+                              src: categories_add[index].src,
+                              paddingside: paddingside,
+                            })}
+                          `;
+                        }).join("")
+                      }
                     </tr>
-                    `).join("")}
-                </table>
+                  `).join("")
+                }
+              </table>
             </td>
           </tr>
         <tbody>
@@ -310,41 +305,40 @@ export async function RegularWednesdayNslt({
             title: getFooter("Title"),
             firstCategory: {
               src: getFooter("Category src 1"),
-              href: getFooter("Category href 1"),
+              href: getCategoryLink("https://www.beliani.co.uk/sofas/all+products"),//href: getFooter("Category href 1"),
             },
             secondCategory: {
               src: getFooter("Category src 2"),
-              href: getFooter("Category href 2"),
+              href: getCategoryLink("https://www.beliani.co.uk/beds/all+products"),//href: getFooter("Category href 2"),
             },
             thirdCategory: {
               src: getFooter("Category src 3"),
-              href: getFooter("Category href 3"),
+              href: getCategoryLink("https://www.beliani.co.uk/tables/coffee-tables"),//href: getFooter("Category href 3"),
             },
             foutrthCategory: {
               src: getFooter("Category src 4"),
-              href: getFooter("Category href 4"),
+              href: getCategoryLink("https://www.beliani.co.uk/chairs/all+products"),//href: getFooter("Category href 4"),
             },
             fifthCategory: {
               src: getFooter("Category src 5"),
-              href: getFooter("Category href 5"),
+              href: getCategoryLink("https://www.beliani.co.uk/armchairs/all+products"),//href: getFooter("Category href 5"),
             },
             sixthCategory: {
               src: getFooter("Category src 6"),
-              href: getFooter("Category href 6"),
+              href: getCategoryLink("https://www.beliani.co.uk/storage/sideboards"),//href: getFooter("Category href 6"),
             },
             seventhCategory: {
               src: getFooter("Category src 7"),
-              href: getFooter("Category href 7"),
+              href: getCategoryLink("https://www.beliani.co.uk/lighting/all+products"),//href: getFooter("Category href 7"),
             },
             eigthCategory: {
               src: getFooter("Category src 8"),
-              href: getFooter("Category href 8"),
+              href: getCategoryLink("https://www.beliani.co.uk/rugs/all+products"),//href: getFooter("Category href 8"),
             },
           },
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
-            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
           },
           socials: {
             title: getFooter("Socials Title"),

@@ -25,7 +25,16 @@ const free = {
   RO: "CADOU",
 }
 
-export function priceFree(product) {
+export function priceFree(product, normalPrice) {
   const country = getState("country")
-  return {...product, lowPrice: free[country], highPrice: product.lowPrice}
+  const normal_product = {...product, lowPrice: product.lowPrice, highPrice: product.highPrice}
+  const free_product = {...product, lowPrice: free[country], highPrice: product.lowPrice}
+  return normalPrice === true ? normal_product : free_product;
+ 
 }
+
+// export function priceFree(product) {
+//   const country = getState("country")
+  
+//   return {...product, lowPrice: free[country], highPrice: product.lowPrice}
+// }
