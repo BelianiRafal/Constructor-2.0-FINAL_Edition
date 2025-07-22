@@ -18,7 +18,7 @@ const free = {
   DK: "GRATIS",
   NO: "GRATIS",
   FI: "ILMAINEN",
-  SE: "GRATIS",
+  SE: "PÅ KÖPET",
   CZ: "ZDARMA",
   SK: "GRÁTIS",
   HU: "AJÁNDÉK",

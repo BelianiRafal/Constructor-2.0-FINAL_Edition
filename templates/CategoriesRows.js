@@ -14,7 +14,10 @@ import {
   Freebies,
   Product,
   ProductWithSize,
+<<<<<<< HEAD
   TopImageTitle,
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 } from "../components/index.js";
 
 export async function CategoriesRows({
@@ -82,6 +85,7 @@ export async function CategoriesRows({
   )}
   <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000;" id="newsletter">
           <tbody>
+<<<<<<< HEAD
                 ${type === "newsletter" ? 
                 `<tr>
                       <td align="center">
@@ -112,6 +116,16 @@ export async function CategoriesRows({
                       </td>
                   </tr>`
               }
+=======
+                <tr>
+                  <td align="center">
+                    ${ImageWithLink({
+                      href: links[0],
+                      src: links[1],
+                    })}
+                  </td>
+              </tr>
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               <tr>
                   <td align="center">
                     ${ImageWithLink({
@@ -151,11 +165,18 @@ export async function CategoriesRows({
                                   <td align="center">
                                   ${Category({
                                     cta: getPhrase("Shop now"),
+<<<<<<< HEAD
                                     name: queries.category[index],
                                     href: getCategoryLink(item.href),
                                     src: item.src,
                                     type: "standard",
                                     align: "left",
+=======
+                                    name: getCategoryTitle(item.name),
+                                    href: getCategoryLink(item.href),
+                                    src: item.src,
+                                    type: item.type,
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                   })}
                                   </td>
                                 </tr>
@@ -166,6 +187,33 @@ export async function CategoriesRows({
                   </table>
                 </td>
               </tr>
+<<<<<<< HEAD
+=======
+
+              <tr>
+                <td class="newsletterBottom35px" style="text-align: center;">
+                  <a href="${
+                    shop.origin
+                  }" style="color:#000; text-decoration: underline;">
+                    <span class="newsletterCta">${getPhrase(
+                      "Shop All Categories"
+                    )}</span>
+                  </a>
+                </td>
+              </tr>
+
+          ${
+            type === "newsletter"
+              ? `
+                <tr>
+                  <td class="newsletterContainer">
+                  ${Line()}
+                  </td>
+                </tr>
+            `
+              : ""
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           <tbody>
       </table>
 
@@ -214,6 +262,7 @@ export async function CategoriesRows({
           </tbody>
       </table>
         `
+<<<<<<< HEAD
           : `<table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
           <tbody>
               <tr>
@@ -255,6 +304,9 @@ export async function CategoriesRows({
           </tr>
           </tbody>
       </table>
+=======
+          : `
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
         `
       }
       ${Footer(
@@ -265,7 +317,11 @@ export async function CategoriesRows({
               ? getFooter("Delivery src")
               : getFooter("Asembly src"),
             href: getFooter("Asembly href"),
+<<<<<<< HEAD
             exclude: ["CHIT"].includes(
+=======
+            exclude: ["SK", "CHIT", "SE", "NO", "FI", "BEFR", "BENL"].includes(
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               country
             ),
           },
@@ -312,7 +368,11 @@ export async function CategoriesRows({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["HU"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

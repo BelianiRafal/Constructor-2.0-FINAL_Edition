@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Create2Columns_Grid } from "../components/Create2Columns_Grid.js";
+=======
+import { Create2Columns } from "../components/Create2Columns.js";
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 import { Footer } from "../components/footer.js";
 import { Header } from "../components/header.js";
 import {
@@ -32,7 +36,10 @@ export async function CategoriesGrid({
   categories,
   background,
 }) {
+<<<<<<< HEAD
   console.log(categories);
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
   return `
   ${Header(
     {
@@ -91,6 +98,7 @@ export async function CategoriesGrid({
                   </td>
               </tr>
               <tr>
+<<<<<<< HEAD
                 <td >
                     ${Space()}
                 </td>
@@ -137,12 +145,71 @@ export async function CategoriesGrid({
               </tr>
               <tr>
                 <td >
+=======
+                  <td align="center">
+                    ${ImageWithLink({
+                      href: links[2],
+                      src: links[3],
+                    })}
+                  </td>
+              </tr>
+
+              <tr>
+                <td align="center" style="background-color: ${background};" class="newsletterContainer">
+                    ${Space({className: "newsletterBottom35px"})}
+                    ${Intro({
+                      title: {
+                        value: queries.offerPart[0],
+                        className: "newsletterTitleOfferPart"
+                      },
+                      paragraph: queries.offerPart[1],
+                      align: "center",
+                      spaceClassName: null,
+                    })}
+                    ${Space({className: "newsletterBottom20px"})}
+                    ${Intro({
+                      title: {
+                        value: queries.offerPart[2],
+                        className: "newsletterTitleOfferPart"
+                      },
+                      paragraph: queries.offerPart[3],
+                      align: "center",
+                      spaceClassName: null,
+                    })}
+                    ${Space({className: "newsletterBottom60px"})}
+                    ${GetCode({
+                      type,
+                      link: links[0],
+                      code: type === "newsletter" ? getPhrase("Get code") : queries.code
+                    })}
+                    ${Space({className: "newsletterBottom60px"})}
+                    ${Paragraph(queries.offerDate, 'center')}
+                    ${Space({className: "newsletterBottom20px"})}
+                    ${GetCode({
+                      type: "newsletter",
+                      link: getCategoryLink("https://www.beliani.ch/bedroom-furniture/mattresses/"),
+                      code: queries.shopAllMattrasses
+                    })}
+                    ${Space({className: "newsletterBottom80px"})}
+                </td>
+              </tr>
+
+              <tr>
+                <td align="center" style="background-color: ${background};" class="newsletterContainer">
+                    ${Line()}
+                    ${Space()}
+                    ${Intro({
+                      data: queries.intro,
+                      align: "center"
+                    })}
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                     ${Space()}
                 </td>
               </tr>
 
               <tr>
                 <td style="background-color: ${background};" class="newsletterContainer">
+<<<<<<< HEAD
                     ${Create2Columns_Grid({
                       shuffle: false,
                       iter: categories,
@@ -152,10 +219,22 @@ export async function CategoriesGrid({
                               <img alt="" src="${
                                 typeof computed.src === "object" ? computed.src.value : computed.src
                               }" style="max-width: 100%; display:block;" loading="lazy">
+=======
+                    ${Create2Columns({
+                      shuffle: true,
+                      iter: categories,
+                      left: (computed) => `
+                        <td align="left" width="50%">
+                          <a href="${getCategoryLink(computed.href)}">
+                              <img alt="" src="${
+                                computed.src
+                              }" style="vertical-align: middle; max-width: 100%;" loading="lazy">
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                           </a>
                         </td>
                       `,
                       right: (computed) => `
+<<<<<<< HEAD
                         <td width="50%" style="padding-right:6px">
                           <a href="${getCategoryLink(computed.href)}">
                             <img alt="" src="${
@@ -172,25 +251,53 @@ export async function CategoriesGrid({
                           ? shop.origin + "?utm_source=newsletter&utm_medium=email&utm_campaign=" + id
                           : shop.origin,
                       type,
+=======
+                        <td align="center" width="50%" style="background-color: #ff2f00; vertical-align: middle;">
+                          <span class="newsletterTitle" style="color: ${computed.color || "#000000"}; ">
+                            ${getCategoryTitle(computed.name)}
+                          </span>
+                          <br>
+                          <br>
+                          <a href="${getCategoryLink(computed.href)}" style="color:${
+                              computed.color || "#000"
+                            }; text-decoration: underline;">
+                            <span class="newsletterCta" >${getPhrase("Shop now")}</span>
+                          </a>
+                        </td>
+                      `,
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                     })}
                 </td>
               </tr>
 
               <tr>
                 <td align="center" style="background-color: ${background};">
+<<<<<<< HEAD
                     ${Space()}
                 </td>
               </tr>
               <!-- Wykomentowana sekcja tabeli
+=======
+                    ${Space({ className: "newsletterBottom80px" })}
+                </td>
+              </tr>
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               <tr>
                 <td class="newsletterContainer" style="background-color: ${background};">
                   ${Line()}
                 </td>
               </tr>
+<<<<<<< HEAD
               -->
           <tbody>
       </table>
       <!-- Wykomentowana sekcja tabeli
+=======
+          <tbody>
+      </table>
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
       <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
           <tbody>
                 <tr>
@@ -203,20 +310,38 @@ export async function CategoriesGrid({
                           </tr>
                             <tr>
                                 <td align="left" class="newsletterBottom35px">
+<<<<<<< HEAD
                                     <span class="newsletterFooterTitle">${getPhrase("Shop limited-time deals")}</span>
+=======
+                                    <span class="newsletterFooterTitle">${getPhrase(
+                                      "Shop limited-time deals"
+                                    )}</span>
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                 </td>
                             </tr>
                             <tr>
                                 <td align="left" class="newsletterBottom20px">
                                     <a href=${links[4]}>
+<<<<<<< HEAD
                                         <img loading="lazy" src=${links[5]} style="display: block;" width="100%">
+=======
+                                        <img loading="lazy" src=${
+                                          links[5]
+                                        } style="display: block;" width="100%">
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                     </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="left" class="newsletterBottom35px">
                                     <a href=${links[6]}>
+<<<<<<< HEAD
                                         <img loading="lazy" src=${links[7]} style="display: block;" width="100%">
+=======
+                                        <img loading="lazy" src=${
+                                          links[7]
+                                        } style="display: block;" width="100%">
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                     </a>
                                 </td>
                             </tr>
@@ -225,14 +350,28 @@ export async function CategoriesGrid({
                 </td>
               </tr>
           </tbody>
+<<<<<<< HEAD
       </table> -->
+=======
+      </table>
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
       ${Footer(
         {
           id,
           assembly: {
+<<<<<<< HEAD
             src: ["AT", "PL", "FR", "UK"].includes(country) ? getFooter("Delivery src") : getFooter("Asembly src"),
             href: getFooter("Asembly href"),
             exclude: ["CHIT"].includes(country),
+=======
+            src: ["AT", "PL", "FR", "UK"].includes(country)
+              ? getFooter("Delivery src")
+              : getFooter("Asembly src"),
+            href: getFooter("Asembly href"),
+            exclude: ["SK", "CHIT", "SE", "NO", "FI", "BEFR", "BENL"].includes(
+              country
+            ),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           workBanner: {
             src: getFooter("Job src"),
@@ -277,7 +416,11 @@ export async function CategoriesGrid({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["HU"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

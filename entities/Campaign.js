@@ -1,5 +1,7 @@
 export class Campaign {
   startId;
+  lpId;
+  specialLpIds;
   name;
   date;
   alarm;
@@ -8,14 +10,8 @@ export class Campaign {
   optimizeImg;
   isArchive;
   products;
-  productImg;
   figmaUrl;
-  single_image;
-  soon_banners;
-  white_line;
-  under_intro_line;
-  category_2_columns;
-  full_img_width;
+  version;
   constructor({
     date,
     data,
@@ -23,18 +19,14 @@ export class Campaign {
     name,
     alarm,
     products,
-    productImg,
     isArchive,
     optimizeImg,
     startId,
+    lpId,
+    specialLpIds = null,
     templates,
     figmaUrl,
-    single_image,
-    soon_banners,
-    white_line,
-    under_intro_line,
-    category_2_columns,
-    full_img_width,
+    version = "old",
   }) {
     if (!Array.isArray(templates)) {
       throw new Error("templates property should be array");
@@ -61,7 +53,9 @@ export class Campaign {
     this.date = date;
     this.issueCardId = issueCardId || null;
     this.name = name;
-    this.startId = startId
+    this.startId = startId;
+    this.lpId = lpId || null;
+    this.specialLpIds = specialLpIds || null;
     this.templates = templates;
     this.alarm = {
       isActive: alarm?.isActive || false,
@@ -71,13 +65,7 @@ export class Campaign {
     this.optimizeImg = optimizeImg || false;
     this.isArchive = isArchive || false;
     this.products = products || null;
-    this.productImg = productImg || null;
     this.figmaUrl = figmaUrl || null;
-    this.single_image = single_image || false;
-    this.soon_banners = soon_banners || false;
-    this.white_line = white_line || false;
-    this.category_2_columns = category_2_columns;
-    this.under_intro_line = under_intro_line || false;
-    this.full_img_width = full_img_width || false;
+    this.version = version || "old";
   }
 }

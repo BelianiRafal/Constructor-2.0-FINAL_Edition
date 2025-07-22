@@ -377,7 +377,11 @@ export async function mondayCategories({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["HU"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

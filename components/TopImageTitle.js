@@ -8,7 +8,7 @@ export const TopImageTitle = isAllowToRender(
     const templates = {
       up_to: `
         <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH1' : 'newsletterTitleH2'}">${title1}</h4>
-        <h5 style="color:${color};" class="${title2?.includes('%') ? 'newsletterTitleH1' : 'newsletterTitleH2'}">${title2 ?? ''}</h5>
+        <h5 style="color:${color};" class="${title2.includes('%') ? 'newsletterTitleH1' : 'newsletterTitleH2'}">${title2}</h5>
       `,
       standard: `
         <h5 style="color:${color};" class="newsletterTitleH1">${title1}</h5>
@@ -21,6 +21,18 @@ export const TopImageTitle = isAllowToRender(
       singleLine: `
         <h4 style="color:${color};" class="newsletterTitleH1">${title1}</h4>
       `,
+      birthday: `
+        <h4 style="color:${color};" class="${title1.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title1}</h4>
+        <h5 style="color:${color};" class="${title2?.includes('%') ? 'newsletterTitleH1Bigger' : 'newsletterTitleH1Bold'}">${title2 ?? ''}</h5>
+    `,
+      firstbig: `
+        <h4 style="color:${color};" class="newsletterTitleH1">${title1}</h4>
+        <h5 style="color:${color};" class="newsletterTitleH2">${title2}</h5>
+      `,
+      secondbig: `
+      <h5 style="color:${color};" class="newsletterTitleH2">${title1}</h4>
+      <h4 style="color:${color};" class="newsletterTitleH1">${title2}</h5>
+    `,
     };
 
     return `

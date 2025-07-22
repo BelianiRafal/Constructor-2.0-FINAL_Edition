@@ -30,7 +30,11 @@ export async function CategoriesGridOffertPart({
   categories,
   background,
 }) {
+<<<<<<< HEAD
   //const codes = queries.getCode.join("").split("<br />");
+=======
+  const codes = queries.getCode.join("").split("<br />");
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
   return `
   ${Header(
     {
@@ -99,7 +103,39 @@ export async function CategoriesGridOffertPart({
 
               <tr>
                 <td align="center" style="background-color: #ffccb7;">
+<<<<<<< HEAD
 
+=======
+                  ${OfferPart({
+                    type,
+                    offerDate: queries.offerDate,
+                    code: queries.getCodes,
+                    href: links[0],
+                    offers: [
+                      {
+                        title: {
+                          value: queries.intro[0],
+                        },
+                        paragraph: queries.intro[1],
+                        code: codes[0],
+                      },
+                      {
+                        title: {
+                          value: queries.intro[2],
+                        },
+                        paragraph: queries.intro[3],
+                        code: codes[1],
+                      },
+                      {
+                        title: {
+                          value: queries.intro[4],
+                        },
+                        paragraph: queries.intro[5],
+                        code: codes[2],
+                      },
+                    ],
+                  })}
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   </td>
               </tr>
 
@@ -262,7 +298,11 @@ export async function CategoriesGridOffertPart({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["HU"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

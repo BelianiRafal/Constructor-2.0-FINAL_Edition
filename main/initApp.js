@@ -1,6 +1,7 @@
 import {
   selectCampaignHandler,
   openCampaignHandler,
+  openLpHandler,
   handleSlugChange,
   openIssueHandler,
   handleShopChange,
@@ -14,6 +15,8 @@ import { fetchTranslations } from "../api/fetchTranslations.js";
 import { normalizeProducts } from "../utils/normalizeProducts.js";
 import { isQuotaExceededError } from "../helpers/isQuotaExceededError.js";
 import { computeValue } from "../helpers/computeValue.js";
+import { getTrackingUrl } from "../utils/geTrackingUrl.js";
+import { generateLpLinks } from "../helpers/generateLpLinks.js";
 
 const state = {
   queries: {},
@@ -61,6 +64,7 @@ export function initApp({ campaigns, shops, config }) {
   const openIssue = document.querySelector(".openIssue");
   const figmaCard = document.querySelector(".figmaCard");
   const clearStorage = document.querySelector(".clearStorage");
+  const openLP = document.querySelector('.openLP');
 
   setState("config", config);
   selectCampaigns.append(...initCampaigns(campaigns, config));
@@ -90,6 +94,8 @@ export function initApp({ campaigns, shops, config }) {
       return;
     }
 
+    // IF data property is NOT provided for CAMPAIGN in app.js
+    // and tableQueries array provided EXECUTE function to fetch translations.
     if (!selectedCampaign.data && templateToRender.tableQueries.length > 0) {
       try {
         setState("loading", true);
@@ -113,6 +119,16 @@ export function initApp({ campaigns, shops, config }) {
         }).showToast();
         return;
       }
+    }
+
+    // IF data property PROVIDED for CAMPAIGN in app.js
+    // and tableQueries array provided ADD FALLBACKS to queries.[name]
+    if (selectedCampaign.data && templateToRender.tableQueries.length > 0) {
+      const queries = {};
+      for (const translation of templateToRender.tableQueries) {
+        queries[translation.name] = translation.fallback
+      }
+      setState("queries", queries);
     }
 
     let slugData = {};
@@ -140,13 +156,19 @@ export function initApp({ campaigns, shops, config }) {
     });
 
     const ids = getState("ids");
-    const localProducts = getState("selectedCampaign").products
-    const LSProducts = localProducts || localStorage.getItem("products")
-    const parsedProducts = localProducts ? normalizeProducts(localProducts) : LSProducts ? JSON.parse(LSProducts) : [];
-    const campaignProducts = localProducts ? parsedProducts : parsedProducts.find(
-      (item) => item.campaign_id === getState("selectedCampaign").startId
-    );
-    
+    const localProducts = getState("selectedCampaign").products;
+    const LSProducts = localProducts || localStorage.getItem("products");
+    const parsedProducts = localProducts
+      ? normalizeProducts(localProducts)
+      : LSProducts
+      ? JSON.parse(LSProducts)
+      : [];
+    const campaignProducts = localProducts
+      ? parsedProducts
+      : parsedProducts.find(
+          (item) => item.campaign_id === getState("selectedCampaign").startId
+        );
+
     // We can read data from table.
     // Create fetch request in tableQueries property inside app.js file.
     const handlers = new TemplateHandlers({
@@ -174,7 +196,6 @@ export function initApp({ campaigns, shops, config }) {
         getProductById: handlers.getProductById,
         getCategoryTitle: handlers.getCategoryTitle,
         getCategoryLink: handlers.getCategoryLink,
-        add_utm: (link) => templateToRender.type == 'newsletter' ? link + '?utm_source=newsletter&utm_medium=email&utm_campaign=' + ids[country] : link,
         getFooter: handlers.getFooter,
         getHeader: handlers.getHeader,
         getPhrase: handlers.getPhrase,
@@ -186,9 +207,7 @@ export function initApp({ campaigns, shops, config }) {
           }
         },
         links: links,
-        utm:
-          "?utm_source=newsletter&utm_medium=email&utm_campaign=" +
-          ids[country],
+        utm: getTrackingUrl({ type: templateToRender.type, id: ids[country] }),
       });
 
       const withStylesOrNo =
@@ -410,6 +429,52 @@ export function initApp({ campaigns, shops, config }) {
         localStorage.clear();
       }
     });
+    const countriesOrdering = [
+      "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL", "PT", "IT", "SE",
+      "HU", "DK", "CZ", "FI", "NO", "SK", "BENL", "BEFR", "RO"
+    ];
+
+    const openLP = document.querySelector('.openLP');
+    openLP?.addEventListener('click', () => {
+      const selectedCampaign = getState('selectedCampaign');
+      console.log('selectedCampaign', selectedCampaign);
+      if (!selectedCampaign.lpId) {
+        Toastify({
+          text: 'You not selected campaign or not set LP id in app.js.',
+          escapeMarkup: false,
+          duration: 3000,
+        }).showToast();
+        return;
+      }
+
+      console.log("selectedCampaign:", selectedCampaign);
+      console.log("specialLpIds:", selectedCampaign.specialLpIds);
+
+      const countryOrderOld = [
+        "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL", "PT",
+        "IT", "SE", "HU", "DK", "CZ", "FI", "NO", "SK", "BENL", "BEFR", "RO"
+      ];
+      
+      const countryOrderNew = [
+        "CHDE", "CHFR", "UK", "DE", "FR", "AT", "ES", "PL", "NL",
+        "BENL", "BEFR", "PT", "IT", "SE", "HU", "DK", "CZ", "FI", "NO", "SK", "RO"
+      ];
+      
+      const selectedCountryOrder = selectedCampaign.version === "new"
+        ? countryOrderNew
+        : countryOrderOld;
+
+      console.log("selectedCampaign.version:", selectedCampaign.version);
+      console.log("selectedCountryOrder:", selectedCountryOrder);
+      
+      const lpLinks = generateLpLinks(
+        selectedCampaign.lpId,
+        selectedCountryOrder,
+        selectedCampaign.name,
+        selectedCampaign.specialLpIds
+      );
+      openLpHandler(lpLinks, state.country);
+    });
 
     const options = [];
     for (const shop of shops) {
@@ -494,12 +559,6 @@ export function initApp({ campaigns, shops, config }) {
       setState("selectedTemplates", templates);
       setState("selectedCampaign", selectedCampaign);
       setState("optimizeImg", selectedCampaign.optimizeImg || false);
-      setState("single_image", selectedCampaign.single_image || false);
-      setState("soon_banners", selectedCampaign.soon_banners || false);
-      setState("white_line", selectedCampaign.white_line || false);
-      setState("under_intro_line", selectedCampaign.under_intro_line || false);
-      setState("category_2_columns", selectedCampaign.category_2_columns);
-      setState("full_img_width", selectedCampaign.full_img_width || false);
     });
 
     selectTemplates.addEventListener("change", (ev) => {

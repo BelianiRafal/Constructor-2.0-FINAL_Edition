@@ -13,7 +13,10 @@ import {
   Product,
   ProductWithSize,
   OfferPartCodes,
+<<<<<<< HEAD
   TopImageTitle,
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -39,11 +42,17 @@ export async function mondayOfferFreeebies({
   background,
   offerPart,
   intro,
+<<<<<<< HEAD
   inside,
   date,
 }) {
   const codes = getCodes(queries);
   console.log(offerPart);
+=======
+}) {
+  const codes = getCodes(queries);
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
   return `
   ${Header(
     {
@@ -93,6 +102,7 @@ export async function mondayOfferFreeebies({
   )}
   <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 650px; width: 100%; background-color: ${background}; color: #000;" id="newsletter">
         <tbody>
+<<<<<<< HEAD
               ${type === "newsletter" ? 
                 `<tr>
                       <td align="center">
@@ -123,6 +133,16 @@ export async function mondayOfferFreeebies({
                       </td>
                   </tr>`
               }
+=======
+              <tr>
+                  <td align="center">
+                    ${ImageWithLink({
+                      href: links[0],
+                      src: links[1],
+                    })}
+                  </td>
+              </tr>
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               <tr>
                   <td align="center">
                     ${ImageWithLink({
@@ -132,6 +152,7 @@ export async function mondayOfferFreeebies({
                   </td>
               </tr>
 
+<<<<<<< HEAD
               ${!inside ?
               `
                 <tr>
@@ -159,15 +180,37 @@ export async function mondayOfferFreeebies({
                     }; color: ${
                     offerPart.color || "#fff"
                   };">
+=======
+
+              <tr>
+                  <td class="newsletterContainer" style="color: ${
+                    offerPart.color || "#000"
+                  };">
+                      ${Space()}
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       ${
                         offerPart.type === "code"
                           ? OfferPartCode({
                               color: offerPart.color,
+<<<<<<< HEAD
                               data: queries.offerPart,
                               href: links[0],
                               getPhrase,
                               type,
                               queries
+=======
+                              paragraph1: queries.offerPart[0],
+                              paragraph2: queries.offerPart[1],
+                              paragraph3: queries.offerPart[2],
+                              paragraph4: getPhrase("Choose from:"),
+                              offerDate: queries.offerPart[2],
+                              href: links[0],
+                              code:
+                                type === "newsletter"
+                                  ? getPhrase("Get code")
+                                  : queries.code,
+                              type,
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                             })
                           : ""
                       }
@@ -175,7 +218,10 @@ export async function mondayOfferFreeebies({
                         offerPart.type === "codes"
                           ? OfferPartCodes({
                               type,
+<<<<<<< HEAD
                               color: offerPart.color,
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                               offerParts: [
                                 {
                                   paragraph: queries.offerPart[0],
@@ -197,6 +243,7 @@ export async function mondayOfferFreeebies({
                                   href: links[0],
                                   type: "newsletter",
                                 },
+<<<<<<< HEAD
                                 type === 'newsletter' ? 
                                 `{
                                   paragraph: queries.offerPart[3],
@@ -204,6 +251,12 @@ export async function mondayOfferFreeebies({
                                 }` : 
                                 ``,
 
+=======
+                                {
+                                  paragraph: queries.offerPart[3],
+                                  class: "newsletterBottom35px",
+                                },
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                 {
                                   paragraph: getPhrase("Choose from:"),
                                 },
@@ -217,6 +270,7 @@ export async function mondayOfferFreeebies({
               </tr>
 
               <tr>
+<<<<<<< HEAD
                 <td style="background-color: ${ freebies.options.background || background }; color: ${ freebies.options?.color || "#000" };">
                 ${FreebiesGenerator({
                   background,
@@ -249,6 +303,40 @@ export async function mondayOfferFreeebies({
                       })}
                   </td>
               </tr>
+=======
+                <td style="background-color: ${background}; color: ${
+    freebies.options.color || "#000"
+  };">
+                  ${FreebiesGenerator({
+                    freebies: freebies.items,
+                    getProductById,
+                  })}
+                  </td>
+              </tr>
+
+
+                <tr>
+                    <td style="background-color: ${
+                      intro.background || background
+                    };">
+                      ${Space()}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="newsletterContainer" style="background-color: ${
+                      intro.background || background
+                    };">
+                        ${Intro({
+                          data: queries.intro,
+                          color: intro?.color,
+                          title: {
+                            className: "newsletterIntroTitle",
+                          },
+                        })}
+                    </td>
+                </tr>
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 
                 <tr>
                     <td style="background-color: ${
@@ -326,7 +414,11 @@ export async function mondayOfferFreeebies({
                     }; color: ${categories[2]?.color || "#000000"}">
                         ${Category({
                           href:
+<<<<<<< HEAD
                             typeof categories[2].href === "object"
+=======
+                            typeof categories[0].href === "object"
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                               ? categories[2].href[country]
                               : getCategoryLink(categories[2].href),
                           name: queries?.categories
@@ -368,9 +460,14 @@ export async function mondayOfferFreeebies({
                           color: categories[3]?.color,
                           type: categories[3].type,
                           products: categories[3].products.map((item) =>
+<<<<<<< HEAD
                             getProductById(item.id, item.src, item.name)
                           ),
                           
+=======
+                            getProductById(item.id, item.src)
+                          ),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                         })}
                     </td>
                 </tr>
@@ -474,7 +571,11 @@ export async function mondayOfferFreeebies({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["HU"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

@@ -5,7 +5,6 @@ import { OriginHref } from "./OriginHref.js";
 import { SlugImage } from "./SlugImage.js";
 import { Image } from "./Image.js";
 import { TemplateLinks } from "./TemplateLinks.js";
-import { FooterLinks } from "./FooterLinks.js";
 import { MondayCategoryProducts } from "./MondayCategoryProducts.js";
 import { ProductInstance } from "./ProductInstance.js";
 import { MondayFreebieNewsletter } from "./Templates/MondayFreebieNewsletter.js";
@@ -27,7 +26,6 @@ export const entities = {
   SlugImage,
   Image,
   TemplateLinks,
-  FooterLinks,
   MondayCategoryProducts,
   ProductInstance,
   MondayFreebieNewsletter,

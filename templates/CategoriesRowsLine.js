@@ -255,7 +255,11 @@ export async function CategoriesRowsLine({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
+<<<<<<< HEAD
             //exclude: ["SK", "HU", "BEFR", "BENL", "RO"].includes(country),
+=======
+            exclude: ["SK", "HU", "BEFR", "BENL", "RO"].includes(country),
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             exclude: ["RO"].includes(country),

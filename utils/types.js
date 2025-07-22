@@ -53,6 +53,14 @@ export default {
             padding-left: 20px;
             padding-right: 20px;
           }
+<<<<<<< HEAD
+=======
+
+          .newsletterContainerFree {
+            padding-left: 124px;
+            padding-right: 124px;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           .newsletterCta {
             font-size: 20px;
@@ -74,15 +82,38 @@ export default {
             padding-bottom: 35px;
           }
 
+<<<<<<< HEAD
           .newsletterBottom60px {
             padding-bottom: 60px;
           }
+=======
+          .newsletterBottom40px {
+            padding-bottom: 40px;
+          }
+
+          .newsletterBottom60px {
+            padding-bottom: 60px;
+          }
+
+          .newsletterBottom70px {
+            padding-bottom: 70px;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           .newsletterParagraph {
             font-size: 18px;
             font-family: "Open Sans", sans-serif;
             line-height: 1.20;
           }
+<<<<<<< HEAD
+=======
+
+          .timerParagraph {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           .newsletterTitleOfferPart {
             font-size: 30px;
@@ -97,6 +128,16 @@ export default {
             font-weight: 600;
           }
 
+<<<<<<< HEAD
+=======
+          .newsletterTitleAdditional{
+            font-size: 27px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.25;
+            text-decoration: underline;
+          }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           .newsletterIntroTitle {
             font-size: 35px;
             font-family: "Open Sans", sans-serif;
@@ -125,11 +166,44 @@ export default {
           }
           
           .newsletterRight10px {
+<<<<<<< HEAD
             padding-right: 10px;
           }
           
           .newsletterLeft10px {
             padding-left: 10px;
+=======
+            padding-right: 10px !important;
+          }
+
+          .newsletterRight02px {
+            padding-right: 20px;
+          }
+
+          .newsletterLeft02px {
+            padding-left: 20px;
+          }
+
+          .newsletterRight5px {
+            padding-right: 5px;
+          }
+          
+          .newsletterLeft10px {
+            padding-left: 10px !important;
+          }
+
+          .newsletterLeft5px {
+            padding-left: 5px;
+          }
+
+          .newsletterLeft20px {
+            padding-left: 20px;
+          }
+          
+          .newsletterRight20px {
+            padding-left: 20px;
+            padding-right: 20px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           }
           
           /* NEWSLETTER END */
@@ -201,23 +275,131 @@ export default {
             padding-top: 35px !important;
             padding-bottom: 35px !important;
           }
+<<<<<<< HEAD
           
           .br {
               display: block; 
           }
           
           @media screen and (max-width: 768px) {
+=======
+
+          .newsletterProductContainer {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
+
+          .newsletterProductContainerLast {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+          }
+
+          .newsletterProductContainer70px {
+            width: 50% !important;
+            vertical-align: top;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 70px;
+          }
+
+          .newsletterProductTitleLast {
+            font-size: 27px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.25;
+            color: #000000;
+            text-decoration: underline;
+          }
+
+          .newsletterAditionalTitle {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
+          .newsletterSubtitleTimer {
+            font-size: 30px; 
+            line-height: 1.25;
+          }
+
+          .newsletterProductTitleContainer {
+            padding-top: 35px;
+          }
+
+          .backgroundOne {
+            background-color: #ffffff !important;
+          }
+          
+          .br {
+            display: block; 
+        }
+          
+          @media screen and (max-width: 768px) {
+            .stack-column {
+              display: block !important;
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+            .product-img {
+              width: 100% !important;
+              height: auto !important;
+            }
+
+            .br {
+    
+              display: contents;
+          }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
 
+<<<<<<< HEAD
             .br {
                display: contents;
+=======
+            .newsletterAditionalTitle {
+              font-size: 25px;
+            }
+
+            .newsletterSubtitleTimer {
+              font-size: 20px !important;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             }
           
             .newsletterFooterCategoryRIGHTBottom {
               padding-left: 5px !important;
             }
+<<<<<<< HEAD
+=======
+
+            .newsletterProductContainer {
+              padding-left: 10px !important;
+              padding-right: 10px !important;
+            }
+
+            .newsletterProductContainerLast {
+              padding-left: 5px !important;
+              padding-right: 5px !important;
+            }
+
+            .newsletterProductContainer70px {
+              width: 50% !important;
+              vertical-align: top;
+              padding-right: 5px !important;
+              padding-bottom: 50px !important;
+            }
+
+            .newsletterProductTitleLast {
+              font-size: 16px !important;
+              text-decoration: underline;
+            }
+
+            .newsletterProductTitleContainer {
+              padding-top: 15px;
+            }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
             .newsletterFooterCategoryLEFT {
               padding-bottom: 10px !important;
@@ -258,14 +440,24 @@ export default {
               display: block;
             }
           
+<<<<<<< HEAD
             .newsletterProductTitleContainer {
               padding-top: 10px;
             }
           
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             .newsletterTitle {
               font-size: 25px;
             }
 
+<<<<<<< HEAD
+=======
+            .newsletterTitleAdditional {
+              font-size: 16px !important;
+            }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             .newsletterIntroTitle {
               font-size: 28px;
             }
@@ -278,6 +470,14 @@ export default {
               padding-left: 10px;
               padding-right: 10px;
             }
+<<<<<<< HEAD
+=======
+
+            .newsletterContainerFree {
+              padding-left: 62px;
+              padding-right: 62px;
+            }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
             .newsletterFreebieContainer {
               padding-left: 10px;
@@ -288,13 +488,28 @@ export default {
               padding-bottom: 20px;
             }
 
+<<<<<<< HEAD
             .newsletterBottom60px {
               padding-bottom: 40px;
             }
+=======
+            .newsletterBottom40px {
+              padding-bottom: 25px;
+            }
+
+            .newsletterBottom60px {
+              padding-bottom: 40px;
+            }
+
+            .newsletterBottom70px {
+              padding-bottom: 50px;
+            }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
             .newsletterParagraph {
               font-size: 16px;
             }
+<<<<<<< HEAD
           
             .newsletterLeft10px {
               padding-left: 5px;
@@ -302,6 +517,44 @@ export default {
           
             .newsletterRight10px {
               padding-right: 5px;
+=======
+
+            .timerParagraph {
+              font-size: 27px;
+            }
+          
+            .newsletterLeft10px {
+              padding-left: 5px !important;
+            }
+
+            .newsletterLeft20px {
+              padding-left: 10px;
+            }
+
+            .newsletterRight20px {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+          
+            .newsletterRight10px {
+              padding-right: 5px !important;
+            }
+
+            .newsletterRight02px {
+              padding-right: 10px;
+            }
+
+            .newsletterLeft02px {
+              padding-left: 10px;
+            }
+
+            .newsletterRight5px {
+              padding-right: 2px;
+            }
+
+            .newsletterLeft5px {
+              padding-left: 2px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             }
           
             .newsletterBottom20px {
@@ -366,6 +619,17 @@ export default {
     
     /* NEWSLETTER START */
     
+<<<<<<< HEAD
+=======
+    .backgroundOne {
+      background-color: #ffffff !important;
+    }
+
+    .backgroundTwo {
+      background-color: #ffffff !important;
+    }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     .newsletterFreebieContainer {
       padding-left: 10px;
     }
@@ -378,6 +642,13 @@ export default {
       padding-bottom: 10px;
     }
 
+<<<<<<< HEAD
+=======
+    .WhiteSpace {
+      background-color: #ffffff !important;
+    }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     .newsletterContainer {
       padding-left: 20px;
       padding-right: 20px;
@@ -394,6 +665,16 @@ export default {
       line-height: 1.20;
       font-family: "Open Sans", sans-serif;
     }
+<<<<<<< HEAD
+=======
+
+    .newsletterCtaTwo {
+      font-size: 20px;
+      line-height: 1.20;
+      font-family: "Open Sans", sans-serif;
+      color: #ffffff !important;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     .newsletterBottom20px {
       padding-bottom: 20px;
@@ -412,6 +693,20 @@ export default {
       font-family: "Open Sans", sans-serif;
       line-height: 1.20;
     }
+<<<<<<< HEAD
+=======
+
+    .newsletterParagraphTwo {
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.20;
+      color: #ffffff !important;
+    }
+
+    .newsletterProductTitleContainer {
+      padding-top: 35px;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     .newsletterTitleOfferPart {
       font-size: 30px;
@@ -425,6 +720,55 @@ export default {
       line-height: 1.20;
       font-weight: 600;
     }
+<<<<<<< HEAD
+=======
+
+    .newsletterTitleTwo {
+      font-size: 30px;
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.20;
+      font-weight: 600;
+      color: #ffffff !important;
+    }
+
+    .newsletterBottomCollor25px {
+      padding-bottom: 25px;
+      background-color: #F6E7E6 !important;
+    }
+
+    .newsletterBottomCollor35px {
+      padding-bottom: 35px;
+      background-color: #F6E7E6 !important;
+    }
+
+    .newsletterBottomCollor80px {
+      padding-bottom: 80px;
+      background-color: #F6E7E6 !important;
+    }
+
+    .newsletterBottomCollorTwo25px {
+      padding-bottom: 25px;
+      background-color: #750000 !important;
+    }
+
+    .newsletterBottomCollorTwo35px {
+      padding-bottom: 35px;
+      background-color: #750000 !important;
+    }
+
+    .newsletterBottomCollorTwo80px {
+      padding-bottom: 80px;
+      background-color: #750000 !important;
+    }
+
+    .newsletterProductTitleLast {
+      font-size: 27px;
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.25;
+      color: #000000;
+      text-decoration: underline;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     .newsletterProductTitle {
       font-size: 20px;
@@ -445,6 +789,28 @@ export default {
       line-height: 1.20;
       text-decoration: line-through;
     }
+<<<<<<< HEAD
+=======
+
+    .newsletterProductContainer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    .newsletterProductContainerLEFT70px {
+      width: 50% !important;
+      vertical-align: top;
+      padding-right: 10px;
+      padding-bottom: 70px;
+    }
+    
+    .newsletterProductContainerRIGHT70px {
+      width: 50% !important;
+      vertical-align: top;
+      padding-left: 10px;
+      padding-bottom: 70px;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     .newsletterRight10px {
       padding-right: 10px;
@@ -557,6 +923,28 @@ export default {
       .newsletterFooterTitle {
         font-size: 18px;
       }
+<<<<<<< HEAD
+=======
+
+      .newsletterProductContainer {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      .newsletterProductContainerLEFT70px {
+        width: 50% !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+        padding-bottom: 50px !important;
+      }
+
+      .newsletterProductContainerRIGHT70px {
+        width: 50% !important;
+        vertical-align: top;
+        padding-left: 5px !important;
+        padding-bottom: 50px !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       .newsletterProductTitleFreebie {
         font-size: 18px;
@@ -575,12 +963,29 @@ export default {
       }
     
       .newsletterProductTitleContainer {
+<<<<<<< HEAD
         padding-top: 10px;
+=======
+        padding-top: 15px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
       }
     
       .newsletterTitle {
         font-size: 25px;
       }
+<<<<<<< HEAD
+=======
+
+      .newsletterTitleTwo {
+        font-size: 25px;
+        color: #ffffff !important;
+      }
+
+      .newsletterProductTitleLast {
+        font-size: 16px !important;
+        text-decoration: underline;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       .newsletterTitleOfferPart {
         font-size: 25px;
@@ -603,10 +1008,51 @@ export default {
       .newsletterBottom60px {
         padding-bottom: 40px;
       }
+<<<<<<< HEAD
+=======
+
+      .newsletterBottomCollor25px {
+        padding-bottom: 15px;
+        background-color: #F6E7E6 !important;
+      }
+
+      .newsletterBottomCollor35px {
+        padding-bottom: 20px;
+        background-color: #F6E7E6 !important;
+      }
+
+      .newsletterBottomCollor80px {
+        padding-bottom: 50px;
+        background-color: #F6E7E6 !important;
+      }
+
+      .newsletterBottomCollorTwo25px {
+        padding-bottom: 15px;
+        background-color: #750000 !important;
+      }
+
+      .newsletterBottomCollorTwo35px {
+        padding-bottom: 20px;
+        background-color: #750000 !important;
+      }
+
+      .newsletterBottomCollorTwo80px {
+        padding-bottom: 50px;
+        background-color: #750000 !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       .newsletterParagraph {
         font-size: 16px;
       }
+<<<<<<< HEAD
+=======
+
+      .newsletterParagraphTwo {
+        font-size: 16px;
+        color: #ffffff !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       .newsletterLeft10px {
         padding-left: 5px;
@@ -987,9 +1433,48 @@ export default {
           
           table {
             table-collapse: unset;
+<<<<<<< HEAD
             border-collapse: separate;
           }
           
+=======
+          }
+          
+          #newsletter .newsletterTitleH1 {
+            font-size: 45px;
+            line-height: 53px;
+            font-weight: 400;
+            margin:0;
+            }
+
+          #newsletter .newsletterTitleH1Bold {
+              font-size: 45px;
+              line-height: 53px;
+              font-weight: 600;
+              margin:0;
+            }
+
+            #newsletter .newsletterTitleH1Bigger {
+              font-size: 67px;
+              line-height: 73px;
+              font-weight: 600;
+              margin:0;
+            }
+            
+            #newsletter .newsletterTitleH2 {
+            font-size: 30px;
+            line-height: 45px;
+            font-weight: 400;
+            margin:0;
+            }
+
+            	
+            #newsletter .newsletterHrefTit {
+              text-decoration:none;
+              text-align:center;
+              }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           #newsletter .title-advantages-item {
             margin-left: 4px;
           }
@@ -1001,6 +1486,25 @@ export default {
             margin-bottom: 10px;
             margin-top: 10px;
           }
+<<<<<<< HEAD
+=======
+
+          #newsletter .newsletterAditionalTitle {
+            font-size: 30px;
+            line-height: 1.20;
+            font-weight: 400;
+          }
+
+          #newsletter .newsletterTitleAdditional{
+            font-size: 27px;
+            line-height: 1.25;
+            text-decoration: underline;
+          }
+
+          #newsletter .newsletterBottom70px {
+            padding-bottom: 70px;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           /* NEWSLETTER START */
           
@@ -1011,6 +1515,14 @@ export default {
           #newsletter .newsletterBottom80px {
             padding-bottom: 80px;
           }
+<<<<<<< HEAD
+=======
+
+          #newsletter .newsletterContainerFree {
+            padding-left: 124px;
+            padding-right: 124px;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           #newsletter .newsletterContainer {
             padding-left: 20px;
@@ -1031,6 +1543,17 @@ export default {
             font-size: 20px;
             line-height: 1.20;
           }
+<<<<<<< HEAD
+=======
+
+          #newsletter .newsletterLeft5px {
+            padding-left: 5px;
+          }
+
+          #newsletter .newsletterRight5px {
+            padding-right: 5px;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           #newsletter .newsletterBottom20px {
             padding-bottom: 20px;
@@ -1044,6 +1567,13 @@ export default {
             padding-bottom: 35px;
           }
 
+<<<<<<< HEAD
+=======
+          #newsletter .newsletterBottom40px {
+            padding-bottom: 40px;
+          }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           #newsletter .newsletterBottom60px {
             padding-bottom: 60px;
           }
@@ -1052,6 +1582,21 @@ export default {
             font-size: 18px;
             line-height: 1.20;
           }
+<<<<<<< HEAD
+=======
+
+          #newsletter .timerParagraph {
+            font-size: 30px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.20;
+          }
+
+          #newsletter .newsletterCodeParagraph {
+            font-size: 20px;
+            line-height: 1.20;
+            font-weight: 600;
+          }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
           #newsletter .newsletterTitle {
             font-size: 30px;
@@ -1059,6 +1604,7 @@ export default {
             font-weight: 600;
           }
 
+<<<<<<< HEAD
           #newsletter .newsletterHrefTit {
             text-decoration:none;
             text-align:center;
@@ -1078,6 +1624,12 @@ export default {
             line-height: 45px;
             font-weight: 400;
             margin:0;
+=======
+          #newsletter .newsletterTitleAditional {
+            font-size: 30px;
+            line-height: 1.20;
+            font-weight: 400;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           }
 
           #newsletter .newsletterIntroTitle {
@@ -1109,11 +1661,36 @@ export default {
           }
           
           #newsletter .newsletterRight10px {
+<<<<<<< HEAD
             padding-right: 10px;
           }
           
           #newsletter .newsletterLeft10px {
             padding-left: 10px;
+=======
+            padding-right: 10px !important;
+          }
+          
+          #newsletter .newsletterLeft10px {
+            padding-left: 10px !important;
+          }
+
+          #newsletter .newsletterRight02px {
+            padding-right: 20px;
+          }
+
+          #newsletter .newsletterLeft02px {
+            padding-left: 20px;
+          }
+
+          #newsletter .newsletterLeft20px {
+            padding-left: 20px;
+          }
+
+          #newsletter .newsletterRight20px {
+            padding-left: 20px;
+            padding-right: 20px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           }
           
           /* NEWSLETTER END */
@@ -1187,17 +1764,146 @@ export default {
             font-size: 20px;
           }
 
+<<<<<<< HEAD
           .br {
             display: block;
           }
           
           @media screen and (max-width: 768px) {
+=======
+          #newsletter .newsletterSubtitleTimer {
+            font-size: 30px; 
+            line-height: 1.25;
+          }
+
+          .newsletterProductContainer {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
+
+          .newsletterProductContainerLast {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+          }
+
+          .newsletterProductContainer70px {
+            width: 50% !important;
+            vertical-align: top;
+            padding-right: 10px;
+            padding-bottom: 70px;
+          }
+
+          .newsletterProductTitleLast {
+            font-size: 27px;
+            line-height: 1.25;
+            color: #000000;
+            text-decoration: underline;
+          }
+
+          .newsletterProductTitleContainer {
+            padding-top: 35px;
+          }
+
+          .backgroundOne {
+            background-color: #ffffff !important;
+          }
+
+          .br {
+            display: block; 
+        }
+          
+          @media screen and (max-width: 768px) {
+            #newsletter .stack-column {
+              display: block !important;
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+
+            #newsletter .product-img {
+              width: 100% !important;
+              height: auto !important;
+            }
+
+            .br {
+    
+              display: contents;
+          }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             #newsletter .newsletterFooterCategoryLEFTBottom {
               padding-right: 5px !important;
             }
 
+<<<<<<< HEAD
             .br {
               display: contents;
+=======
+            #newsletter .newsletterSubtitleTimer {
+              font-size: 20px !important;
+            }
+
+            #newsletter .newsletterTitleH1 {
+              font-size: 30px;
+              line-height: 45px;
+            }
+
+            #newsletter .newsletterTitleAdditional {
+              font-size: 16px !important;
+            }
+
+            #newsletter .newsletterAditionalTitle {
+              font-size: 25px;
+            }
+
+            #newsletter .newsletterBottom70px {
+            padding-bottom: 50px;
+          }
+
+            #newsletter .newsletterTitleH1Bold {
+              font-size: 30px;
+              line-height: 35px;
+            }
+
+            #newsletter .newsletterContainerFree {
+              padding-left: 62px;
+              padding-right: 62px;
+            }
+              
+            #newsletter .newsletterTitleH2 {
+              font-size: 22px;
+              line-height: 27px;
+            }
+
+            #newsletter .newsletterTitleH1Bigger {
+              font-size: 45px;
+              line-height: 45px;
+            }
+
+            .newsletterProductContainer {
+              padding-left: 10px !important;
+              padding-right: 10px !important;
+            }
+
+            .newsletterProductContainerLast {
+              padding-left: 5px !important;
+              padding-right: 5px !important;
+            }
+            
+            .newsletterProductContainer70px {
+              width: 50% !important;
+              vertical-align: top;
+              padding-right: 5px !important;
+              padding-bottom: 50px !important;
+            }
+  
+            .newsletterProductTitleLast {
+              font-size: 16px !important;
+              text-decoration: underline;
+            }
+  
+            .newsletterProductTitleContainer {
+              padding-top: 15px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             }
           
             #newsletter .newsletterFooterCategoryRIGHTBottom {
@@ -1208,10 +1914,13 @@ export default {
               padding-bottom: 10px !important;
               padding-right: 5px !important;
             }
+<<<<<<< HEAD
 
             #newsletter .newsletterHrefTit {
               padding:0 15px;
             }
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
             #newsletter .newsletterFooterCategoryRIGHT {
               padding-bottom: 10px !important;
@@ -1226,6 +1935,7 @@ export default {
               padding-top: 20px !important;
               padding-bottom: 20px !important;
             }
+<<<<<<< HEAD
 
             #newsletter .newsletterTitleH1 {
               font-size: 30px;
@@ -1236,6 +1946,8 @@ export default {
               font-size: 22px;
               line-height: 27px;
             }
+=======
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           
             #newsletter .newsletterFooterTitle {
               font-size: 18px;
@@ -1269,6 +1981,13 @@ export default {
               font-size: 25px;
             }
 
+<<<<<<< HEAD
+=======
+            #newsletter .newsletterTitleAditional{
+              font-size: 25px;
+            }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             #newsletter .newsletterTitleOfferPart {
               font-size: 20px;
             }
@@ -1292,6 +2011,13 @@ export default {
               padding-bottom: 20px;
             }
 
+<<<<<<< HEAD
+=======
+            #newsletter .newsletterBottom40px {
+              padding-bottom: 25px;
+            }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             #newsletter .newsletterBottom60px {
               padding-bottom: 40px;
             }
@@ -1299,6 +2025,7 @@ export default {
             #newsletter .newsletterParagraph {
               font-size: 16px;
             }
+<<<<<<< HEAD
           
             #newsletter .newsletterLeft10px {
               padding-left: 5px;
@@ -1306,6 +2033,44 @@ export default {
           
             #newsletter .newsletterRight10px {
               padding-right: 5px;
+=======
+
+            #newsletter .timerParagraph {
+              font-size: 27px;
+            }
+
+            #newsletter .newsletterLeft5px {
+              padding-left: 2px;
+            }
+
+            #newsletter .newsletterRight5px {
+              padding-right: 2px;
+            }
+          
+            #newsletter .newsletterLeft10px {
+              padding-left: 5px !important;
+            }
+
+            #newsletter .newsletterLeft20px {
+              padding-left: 10px;
+            }
+
+            #newsletter .newsletterRight20px {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+          
+            #newsletter .newsletterRight10px {
+              padding-right: 5px !important;
+            }
+
+            #newsletter .newsletterRight02px {
+              padding-right: 10px;
+            }
+  
+            #newsletter .newsletterLeft02px {
+              padding-left: 10px;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
             }
           
             #newsletter .newsletterBottom20px {
@@ -1374,6 +2139,32 @@ export default {
       padding-left: 20px;
       padding-right: 20px;
     }
+<<<<<<< HEAD
+=======
+
+    #newsletter .WhiteSpace {
+      background-color: #ffffff !important;
+    }
+
+    #newsletter .newsletterProductContainer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    #newsletter .newsletterProductContainerLEFT70px {
+      width: 50% !important;
+      vertical-align: top;
+      padding-right: 10px;
+      padding-bottom: 70px;
+    }
+    
+    #newsletter .newsletterProductContainerRIGHT70px {
+      width: 50% !important;
+      vertical-align: top;
+      padding-left: 10px;
+      padding-bottom: 70px;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     #newsletter.newsletterContainer {
       padding-left: 20px;
@@ -1383,7 +2174,16 @@ export default {
     #newsletter .newsletterCta {
       font-size: 20px;
       line-height: 1.20;
+<<<<<<< HEAD
       font-weight: 600;
+=======
+    }
+
+    #newsletter .newsletterCtaTwo {
+      font-size: 20px;
+      line-height: 1.20;
+      color: #ffffff !important;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     }
 
     #newsletter .newsletterCode {
@@ -1391,6 +2191,21 @@ export default {
       font-weight: 600;
       line-height: 1.20;
     }
+<<<<<<< HEAD
+=======
+
+    #newsletter .backgroundOne {
+      background-color: #ffffff !important;
+    }
+
+    #newsletter .backgroundTwo {
+      background-color: #FFCCB7 !important;
+    }
+
+    .newsletterProductTitleContainer {
+      padding-top: 35px;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     #newsletter .newsletterBottom20px {
       padding-bottom: 20px;
@@ -1407,15 +2222,75 @@ export default {
     #newsletter .newsletterBottom60px {
       padding-bottom: 60px;
     }
+<<<<<<< HEAD
+=======
+
+    #newsletter .newsletterBottomCollor25px {
+      padding-bottom: 25px;
+      background-color: #F6E7E6 !important;
+    }
+
+    #newsletter .newsletterBottomCollor35px {
+      padding-bottom: 35px;
+      background-color: #F6E7E6 !important;
+    }
+
+    #newsletter .newsletterBottomCollor80px {
+      padding-bottom: 80px;
+      background-color: #F6E7E6 !important;
+    }
+
+    #newsletter .newsletterBottomCollorTwo25px {
+      padding-bottom: 25px;
+      background-color: #750000 !important;
+    }
+
+    #newsletter .newsletterBottomCollorTwo35px {
+      padding-bottom: 35px;
+      background-color: #750000 !important;
+    }
+
+    #newsletter .newsletterBottomCollorTwo80px {
+      padding-bottom: 80px;
+      background-color: #750000 !important;
+    }
+
+    .newsletterProductTitleLast {
+      font-size: 27px;
+      line-height: 1.25;
+      color: #000000;
+      text-decoration: underline;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     #newsletter .newsletterParagraph {
       font-size: 18px;
       line-height: 1.20;
     }
+<<<<<<< HEAD
+=======
+
+    #newsletter .newsletterParagraphTwo {
+      font-size: 18px;
+      line-height: 1.20;
+      color: #ffffff !important;
+    }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
     #newsletter .newsletterTitle {
       font-size: 30px;
       line-height: 1.20;
+<<<<<<< HEAD
+=======
+      font-weight: 600;
+    }
+
+   #newsletter .newsletterTitleTwo {
+      font-size: 30px;
+      line-height: 1.20;
+      font-weight: 600;
+      color: #ffffff !important;
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     }
 
     #newsletter .newsletterTitleOfferPart {
@@ -1550,6 +2425,28 @@ export default {
       #newsletter .newsletterFooterTitle {
         font-size: 18px;
       }
+<<<<<<< HEAD
+=======
+
+      #newsletter .newsletterProductContainer {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      #newsletter .newsletterProductContainerLEFT70px {
+        width: 50% !important;
+        vertical-align: top;
+        padding-right: 5px !important;
+        padding-bottom: 50px !important;
+      }
+
+      #newsletter .newsletterProductContainerRIGHT70px {
+        width: 50% !important;
+        vertical-align: top;
+        padding-left: 5px !important;
+        padding-bottom: 50px !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       #newsletter .newsletterProductTitleFreebie {
         font-size: 18px;
@@ -1562,6 +2459,14 @@ export default {
       #newsletter .newsletterProductLowPrice {
         font-size: 16px;
       }
+<<<<<<< HEAD
+=======
+
+      .newsletterProductTitleLast {
+        font-size: 16px !important;
+        text-decoration: underline;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       #newsletter .newsletterProductHightPrice {
         display: block;
@@ -1575,6 +2480,14 @@ export default {
         font-size: 25px;
       }
 
+<<<<<<< HEAD
+=======
+      #newsletter .newsletterTitleTwo {
+        font-size: 25px;
+        color: #ffffff !important;
+      }
+
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
       #newsletter .newsletterTitleOfferPart {
         font-size: 25px;
       }
@@ -1593,6 +2506,39 @@ export default {
         padding-left: 10px;
         padding-right: 0px !important;
       }
+<<<<<<< HEAD
+=======
+
+      #newsletter .newsletterBottomCollor25px {
+        padding-bottom: 15px;
+        background-color: #F6E7E6 !important;
+      }
+
+      #newsletter .newsletterBottomCollor35px {
+        padding-bottom: 20px;
+        background-color: #F6E7E6 !important;
+      }
+
+      #newsletter .newsletterBottomCollor80px {
+        padding-bottom: 50px;
+        background-color: #F6E7E6 !important;
+      }
+
+      #newsletter .newsletterBottomCollorTwo25px {
+        padding-bottom: 15px;
+        background-color: #750000 !important;
+      }
+
+      #newsletter .newsletterBottomCollorTwo35px {
+        padding-bottom: 20px;
+        background-color: #750000 !important;
+      }
+
+      #newsletter .newsletterBottomCollorTwo80px {
+        padding-bottom: 50px;
+        background-color: #750000 !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       #newsletter .newsletterBottom35px {
         padding-bottom: 20px;
@@ -1605,6 +2551,14 @@ export default {
       #newsletter .newsletterParagraph {
         font-size: 16px;
       }
+<<<<<<< HEAD
+=======
+
+      #newsletter .newsletterParagraphTwo {
+        font-size: 16px;
+        color: #ffffff !important;
+      }
+>>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
     
       #newsletter .newsletterLeft10px {
         padding-left: 5px;

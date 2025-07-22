@@ -2,7 +2,6 @@ import types from "../utils/types.js";
 import { Line } from "./Line.js";
 
 export function Footer(sections, options) {
-
   const id = sections.id;
   const json_footer = {
     assembly: {

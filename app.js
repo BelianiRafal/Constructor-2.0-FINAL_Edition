@@ -90,7 +90,6 @@ export function getImageUrl(imageName, version) {
   else {
     versionParam = getImageVersion(imageName);
   }
-
   // Zwróć pełny URL z parametrem wersji
   return updatedConfig.server_url + imageName + "?ver=" + versionParam;
 }
