@@ -225,11 +225,7 @@ export async function [template_name]({
   country,           -> get access to rendered country
   type,              -> template type (newsletter or landing)
   name,              -> template name,
-<<<<<<< HEAD
-  utm:               -> tracking url with id,
-=======
   utm:               -> tracking url with id for newsletter type, emprty string for landing type see utils/getTrackingUrl.js,
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
   categories,        -> categories handled by app
   background,        -> background color | default #ffffff -> located in initApp.js, | possibility to add user color in app.js for template.
   config             -> config object that is defined in app.js file
@@ -245,11 +241,7 @@ export async function [template_name]({
 > If you don't know which property to define, by clicking Ctrl+Space you will get hint window.\
 **But you can always define everything as we do previously.**
 
-<<<<<<< HEAD
-## To use in app.js
-=======
 ## Example
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 #### Campaign -> to initialize campaign in app.js
 ```
 new entities.Campaign({
@@ -291,30 +283,11 @@ Imported products from extension. If not provided, products from localStorage wi
                 name: "Storage beds",
                 background: "#750000",
                 color: "#ffffff",
-<<<<<<< HEAD
-                src: "https://pictureserver.net/static/2024/20241209Category1.png",
-=======
                 src: "https://upload.pictureserver.net/static/2024/20241209Category1.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                 href: "https://www.beliani.ch/beds/storage-beds/",
                 products: [
                   new entities.ProductInstance({
                     id: "564062",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category11.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "192890",
-                    src: "https://pictureserver.net/static/2024/20241209Category12.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "142341",
-                    src: "https://pictureserver.net/static/2024/20241209Category13.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "392644",
-                    src: "https://pictureserver.net/static/2024/20241209Category14.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category11.png",
                   }),
                   new entities.ProductInstance({
@@ -328,7 +301,6 @@ Imported products from extension. If not provided, products from localStorage wi
                   new entities.ProductInstance({
                     id: "392644",
                     src: "https://upload.pictureserver.net/static/2024/20241209Category14.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   }),
                 ],
               }),
@@ -337,30 +309,11 @@ Imported products from extension. If not provided, products from localStorage wi
                 background: "#FFCCB7",
                 color: "#000000",
                 type: "monday",
-<<<<<<< HEAD
-                src: "https://pictureserver.net/static/2024/20241209Category2.png",
-=======
                 src: "https://upload.pictureserver.net/static/2024/20241209Category2.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                 href: "https://www.beliani.ch/beds/fabric-beds/",
                 products: [
                   new entities.ProductInstance({
                     id: "565963",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category21.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "449153",
-                    src: "https://pictureserver.net/static/2024/20241209Category22.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "329401",
-                    src: "https://pictureserver.net/static/2024/20241209Category23.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "186252",
-                    src: "https://pictureserver.net/static/2024/20241209Category24.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category21.png",
                   }),
                   new entities.ProductInstance({
@@ -374,7 +327,6 @@ Imported products from extension. If not provided, products from localStorage wi
                   new entities.ProductInstance({
                     id: "186252",
                     src: "https://upload.pictureserver.net/static/2024/20241209Category24.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   }),
                 ],
               }),
@@ -383,30 +335,11 @@ Imported products from extension. If not provided, products from localStorage wi
                 background: "#750000",
                 color: "#ffffff",
                 type: "monday",
-<<<<<<< HEAD
-                src: "https://pictureserver.net/static/2024/20241209Category3.png",
-=======
                 src: "https://upload.pictureserver.net/static/2024/20241209Category3.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                 href: "https://www.beliani.ch/beds/metal-beds/",
                 products: [
                   new entities.ProductInstance({
                     id: "136637",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category31.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "244594",
-                    src: "https://pictureserver.net/static/2024/20241209Category32.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "306232",
-                    src: "https://pictureserver.net/static/2024/20241209Category33.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "51335",
-                    src: "https://pictureserver.net/static/2024/20241209Category34.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category31.png",
                   }),
                   new entities.ProductInstance({
@@ -420,7 +353,6 @@ Imported products from extension. If not provided, products from localStorage wi
                   new entities.ProductInstance({
                     id: "51335",
                     src: "https://upload.pictureserver.net/static/2024/20241209Category34.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   }),
                 ],
               }),
@@ -429,30 +361,11 @@ Imported products from extension. If not provided, products from localStorage wi
                 background: "#FFCCB7",
                 color: "#000000",
                 type: "monday",
-<<<<<<< HEAD
-                src: "https://pictureserver.net/static/2024/20241209Category4.png",
-=======
                 src: "https://upload.pictureserver.net/static/2024/20241209Category4.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                 href: "https://www.beliani.ch/beds/leather-beds/",
                 products: [
                   new entities.ProductInstance({
                     id: "93604",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category41.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "746",
-                    src: "https://pictureserver.net/static/2024/20241209Category42.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "194963",
-                    src: "https://pictureserver.net/static/2024/20241209Category43.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "394734",
-                    src: "https://pictureserver.net/static/2024/20241209Category44.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category41.png",
                   }),
                   new entities.ProductInstance({
@@ -466,7 +379,6 @@ Imported products from extension. If not provided, products from localStorage wi
                   new entities.ProductInstance({
                     id: "394734",
                     src: "https://upload.pictureserver.net/static/2024/20241209Category44.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   }),
                 ],
               }),
@@ -475,38 +387,22 @@ Imported products from extension. If not provided, products from localStorage wi
               new entities.OriginHref({ value: "content/lp24-12-09" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209_01.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209_01.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-09" }),
               new entities.Image({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209gif.gif",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209gif.gif",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-05" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241205b.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241205b.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-04" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241204b.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241204b.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
             ]),
             tableQueries: [
@@ -549,20 +445,12 @@ Imported products from extension. If not provided, products from localStorage wi
                   products: [
                     {
                       id: "113426",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie1.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie1.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 10px; padding-left: 60px;",
                     },
                     {
                       id: "113443",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie2.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie2.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 60px; padding-left: 10px;",
                     },
                   ],
@@ -573,20 +461,12 @@ Imported products from extension. If not provided, products from localStorage wi
                   products: [
                     {
                       id: "358921",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie3.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie3.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 10px; padding-left: 60px;",
                     },
                     {
                       id: "174021",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie4.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie4.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 60px; padding-left: 10px;",
                     },
                   ],
@@ -601,30 +481,11 @@ new entities.MondayCategoryProducts({
                 name: "Storage beds",
                 background: "#750000",
                 color: "#ffffff",
-<<<<<<< HEAD
-                src: "https://pictureserver.net/static/2024/20241209Category1.png",
-=======
                 src: "https://upload.pictureserver.net/static/2024/20241209Category1.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                 href: "https://www.beliani.ch/beds/storage-beds/",
                 products: [
                   new entities.ProductInstance({
                     id: "564062",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category11.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "192890",
-                    src: "https://pictureserver.net/static/2024/20241209Category12.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "142341",
-                    src: "https://pictureserver.net/static/2024/20241209Category13.png",
-                  }),
-                  new entities.ProductInstance({
-                    id: "392644",
-                    src: "https://pictureserver.net/static/2024/20241209Category14.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category11.png",
                   }),
                   new entities.ProductInstance({
@@ -638,7 +499,6 @@ new entities.MondayCategoryProducts({
                   new entities.ProductInstance({
                     id: "392644",
                     src: "https://upload.pictureserver.net/static/2024/20241209Category14.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   }),
                 ],
               })
@@ -648,11 +508,7 @@ new entities.MondayCategoryProducts({
 ```
 new entities.ProductInstance({
                     id: "564062",
-<<<<<<< HEAD
-                    src: "https://pictureserver.net/static/2024/20241209Category11.png",
-=======
                     src: "https://upload.pictureserver.net/static/2024/20241209Category11.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                   })
 ```
 #### FreebieItem -> to initialize in **freebies: { items: [] }** for **template**
@@ -663,20 +519,12 @@ new entities.FreebieItem({
                   products: [
                     {
                       id: "358921",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie3.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie3.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 10px; padding-left: 60px;",
                     },
                     {
                       id: "174021",
-<<<<<<< HEAD
-                      src: "https://pictureserver.net/static/2024/20241209Freebie4.png",
-=======
                       src: "https://upload.pictureserver.net/static/2024/20241209Freebie4.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                       style: "padding-right: 60px; padding-left: 10px;",
                     },
                   ],
@@ -692,11 +540,7 @@ new entities.OriginHref({ value: "content/lp24-12-09" })
 ```
 new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209_01.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209_01.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               })
 ```
 
@@ -753,38 +597,22 @@ new entities.TemplateLinks([
               new entities.OriginHref({ value: "content/lp24-12-09" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209_01.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209_01.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-09" }),
               new entities.Image({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209gif.gif",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209gif.gif",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-05" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241205b.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241205b.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
               new entities.OriginHref({ value: "content/lp24-12-04" }),
               new entities.SlugImage({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241204b.png",
-=======
                   "https://upload.pictureserver.net/static/2024/20241204b.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               }),
             ])
 ```
@@ -792,11 +620,7 @@ new entities.TemplateLinks([
 ```
 new entities.Image({
                 value:
-<<<<<<< HEAD
-                  "https://pictureserver.net/static/2024/20241209gif.gif",
-=======
                   "https://upload.pictureserver.net/static/2024/20241209gif.gif",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
               })
 ```
 
@@ -863,9 +687,6 @@ If not fetched dynamically will use local data which is located inside: main/dat
 2. Copy values from spreadsheet from 1 row and column to last row last column
 3. Open https://csvjson.com/csv2json select Hash option
 4. Convert value to JSON
-<<<<<<< HEAD
-5. Add to **app.js** file
-=======
 5. Add ```data``` property for Campaign in **app.js** file
 
 #### Example
@@ -1407,17 +1228,12 @@ If not fetched dynamically will use local data which is located inside: main/dat
         products: [],
       })
 ```
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 
 ## Use campaign data in template
 1. Check if function "getCampaignData" has been added in template
 2. Call "getCampaignData" function with Column name parameter in template place where you want get result.
 
-<<<<<<< HEAD
-## Example 
-=======
 #### Example 
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 ```
   getCampaignData("Regular Conditions")
 ```
