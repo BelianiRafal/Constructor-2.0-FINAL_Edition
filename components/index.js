@@ -47,9 +47,11 @@ import { FreeTimer } from "./freetimer.js";
 import { fCategory } from "./firstcategory.js";
 import { sCategory } from "./secondcategory.js";
 import { BigProduct } from "./bigProduct.js";
+import {ColumnsTwoPeak} from './ColumnsTwoPeak.js';
 
 export {
   ProductWithSize,
+  ColumnsTwoPeak,
   Space,
   Paragraph,
   ImageWithLink,

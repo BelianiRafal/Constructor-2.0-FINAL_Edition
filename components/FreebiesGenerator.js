@@ -13,10 +13,7 @@ const FreebiesGenerator = ({ freebies,  getProductById, color }) => {
             ...priceFree(getProductById(item.id, item.src)),
           })),
           size: freebie.size,
-<<<<<<< HEAD
           color: color,
-=======
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
         })}
         ${Space({ className: "newsletterBottom20px" })}
         `;

@@ -4,26 +4,13 @@ import { AdventCalendar } from "./AdventCalendar.js";
 import { CategoriesRowsOfferPart } from "./CategoriesRowsOfferPart.js";
 import { CategoriesGridOffertPart } from "./CategoriesGridOffertPart.js";
 import { CategoriesGrid } from "./CategoriesGrid.js";
-<<<<<<< HEAD
-import { mondayOfferSingleFreeebies } from "./mondayOfferSingleFreeebies.js";
-=======
 import { mondayOfferFreeebiesLines } from "./mondayOfferFreeebiesLines.js";
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 import { mondayOfferFreeebies } from "./mondayOfferFreeebies.js";
 import { mondayCategories } from "./mondayCategories.js";
 import { CategoriesRows } from "./CategoriesRows.js";
 import { CategoriesRowsLinePriceTitle } from "./CategoriesRowsLinePriceTitle.js";
 import { CategoriesRowsLine } from "./CategoriesRowsLine.js";
 import { mondayOfferFreebiesInsideBanner } from "./mondayOfferFreebiesInsideBanner.js";
-<<<<<<< HEAD
-import { mondayOfferLines } from "./mondayOfferLines.js";
-import { mondayOfferFreeebiesCategoryFilters } from "./mondayOfferFreeebiesCategoryFilters.js"
-import { mondayRegularNslt } from "./mondayRegularNslt.js"
-import { RegularNslt } from "./RegularNslt.js"
-import { RegularWednesdayNslt } from "./RegularWednesdayNslt.js"
-import { MondayEarthDayNslt } from "./MondayEarthDayNslt.js"
-import { FrenchDays } from './French.js';
-=======
 import { Newyear } from "./Newyear.js";
 import { NewyearLP } from "./NewyearLP.js";
 import { Moonlight } from "./Moonlight.js";
@@ -53,7 +40,6 @@ import { ParasolLP } from "./ParasolLP.js";
 import { BirthdayWhiteNL } from "./BirthdayWhite.js";
 import { Side } from "./Side.js";
 import { SideLP } from "./SideLP.js";
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 
 export const templates = {
   newsletter_FGG,
@@ -62,22 +48,6 @@ export const templates = {
   CategoriesRowsOfferPart,
   CategoriesGridOffertPart,
   CategoriesGrid,
-<<<<<<< HEAD
-  mondayOfferSingleFreeebies,
-  mondayOfferFreeebies,
-  mondayCategories,
-  CategoriesRows,
-  mondayRegularNslt,
-  mondayOfferFreebiesInsideBanner,
-  CategoriesRowsLinePriceTitle,
-  CategoriesRowsLine,
-  mondayOfferLines,
-  mondayOfferFreeebiesCategoryFilters,
-  RegularNslt,
-  RegularWednesdayNslt,
-  MondayEarthDayNslt,
-  FrenchDays,
-=======
   mondayOfferFreeebiesLines,
   mondayOfferFreeebies,
   mondayCategories,
@@ -114,5 +84,4 @@ export const templates = {
   BirthdayWhiteNL,
   Side,
   SideLP,
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 };

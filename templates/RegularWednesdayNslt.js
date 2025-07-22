@@ -12,12 +12,9 @@ import {
   Timer,
   TopImageTitle,
   AdditionalCategories,
-<<<<<<< HEAD
-=======
   CategoryOneBannerWhite,
   CategoryOneBanner,
   CategoryOneLast,
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
 } from "../components/index.js";
 import { OfferPart } from "../components/OfferPart.js";
 import { OfferPartCode } from "../components/OfferPartCode.js";
@@ -39,10 +36,7 @@ export async function RegularWednesdayNslt({
   country,
   type,
   categories,
-<<<<<<< HEAD
-=======
   categories_add,
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
   background,
   header,
   offerPart,
@@ -149,11 +143,7 @@ export async function RegularWednesdayNslt({
                           href: links[0],
                           title1: queries.tit[0],
                           title2: queries.tit[1],
-<<<<<<< HEAD
-                          color: "#000000",
-=======
                           color: "#ffffff",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                           type: "up_to",
                         })}
                       `
@@ -164,73 +154,6 @@ export async function RegularWednesdayNslt({
               `
             }
             <tr>
-<<<<<<< HEAD
-                <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
-                    <tbody>
-                    ${categories
-                      .map((item, index) => {
-                        console.log(`Sprawdzam href dla kategorii ${index}:`, item.href);
-                        const isLast = index === categories.length - 1; // Sprawdzenie, czy to ostatni element
-                        const background = item.background; // Domyślny kolor tła
-                        const color = item.color; // Domyślny kolor tekstu
-                        const srcValue = item.src?.value || ""; // Pobranie `value`, jeśli istnieje
-                    
-                        // Pobieranie poprawnego indeksu dla `queries.categories`
-                        const dataIndex = index * 2; 
-                        if (dataIndex >= queries.categories.length) return ""; // Zabezpieczenie przed wyjściem poza zakres
-                    
-                        const title = queries.categories[dataIndex] || "Default Title";
-                        const paragraph = queries.categories[dataIndex + 1] || "Default Paragraph";
-                    
-                        return `
-                        <tr>
-                            <td style="background-color: ${background}; color: ${color};">
-                              ${Category({
-                                data: [title, paragraph], // Przekazanie poprawnej pary danych
-                                href: getCategoryLink(item.href),
-                                name: title,
-                                color: item.color,
-                                desc: paragraph,
-                                src: item.src,
-                                cta: getPhrase("Shop now"),
-                                type: "wednesday",
-                                products: item.products?.map((item) =>
-                                  getProductById(item.id, item.src)
-                                ) || [],
-                              })}
-                            </td>
-                        </tr>
-                        `;
-                      })
-                      .join("")}
-                </td>
-            </tr>
-            <tr>
-                <td style="background-color: #ffffff; color: #000000;">
-                    ${AdditionalCategories({
-                      // text1: queries.additional[0],
-                      // text2: queries.additional[1],
-                      // text3: queries.additional[2],
-                      // text4: queries.additional[3],
-                      // text5: queries.additional[4],
-                      // href1: categories[4].href,
-                      // href2: categories[5].href,
-                      // href3: categories[6].href,
-                      // href4: categories[7].href,
-                      // src1: categories[4].src,
-                      // src2: categories[5].src,
-                      // src3: categories[6].src,
-                      // src4: categories[7].src,
-                        ...queries.additional.reduce((acc, text, i) => ({ ...acc, [`text${i + 1}`]: text }), {}),
-                        ...[4, 5, 6, 7].reduce((acc, i, idx) => ({
-                          ...acc,
-                          [`href${idx + 1}`]: categories[i]?.href,
-                          [`src${idx + 1}`]: categories[i]?.src
-                        }), {})
-                    })}
-                </td>
-            </tr>
-=======
             <td style="background-color: ${categories[0]?.background || background}; color: ${categories[0]?.color || "#000000"}">
               <tbody>
                 ${categories
@@ -322,7 +245,6 @@ export async function RegularWednesdayNslt({
                 </table>
             </td>
           </tr>
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
         <tbody>
       </table>
       <table align="center" border="0" cellpadding="0" cellspacing="0" class="newsletterContainer" style="margin: 0 auto; max-width: 650px; color: #000000; background-color:#ffffff;" id="newsletter">
@@ -345,30 +267,18 @@ export async function RegularWednesdayNslt({
                               </tr>
                               <tr>
                                   <td align="left" class="newsletterBottom20px">
-<<<<<<< HEAD
-                                      <a href=${links[4]}>
-                                          <img loading="lazy" src=${
-                                            links[5]
-=======
                                       <a href=${links[5]}>
                                           <img loading="lazy" src=${
                                             links[6]
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                           } style="display: block;" width="100%">
                                       </a>
                                   </td>
                               </tr>
                               <tr>
                                   <td align="left" class="newsletterBottom35px">
-<<<<<<< HEAD
-                                      <a href=${links[6]}>
-                                          <img loading="lazy" src=${
-                                            links[7]
-=======
                                       <a href=${links[7]}>
                                           <img loading="lazy" src=${
                                             links[8]
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                                           } style="display: block;" width="100%">
                                       </a>
                                   </td>
@@ -434,11 +344,7 @@ export async function RegularWednesdayNslt({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
-<<<<<<< HEAD
-            //exclude: ["HU"].includes(country),
-=======
             exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),

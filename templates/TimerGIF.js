@@ -113,31 +113,12 @@ export async function TimerGIF({
                           "https://www.beliani.ch/office-furniture/desks-eng/"
                         ),
                         name: queries.categories[0],
-<<<<<<< HEAD
-                        src: "https://pictureserver.net/static/2024/20240603Category1.png",
-=======
                         src: "https://upload.pictureserver.net/static/2024/20240603Category1.png",
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                         cta: queries.cta,
                         type: "monday",
                         products: [
                           getProductById(
                             "238646",
-<<<<<<< HEAD
-                            "https://pictureserver.net/static/2024/20240603Category11.png"
-                          ),
-                          getProductById(
-                            "319065",
-                            "https://pictureserver.net/static/2024/20240603Category12.png"
-                          ),
-                          getProductById(
-                            "319062",
-                            "https://pictureserver.net/static/2024/20240603Category13.png"
-                          ),
-                          getProductById(
-                            "310523",
-                            "https://pictureserver.net/static/2024/20240603Category14.png"
-=======
                             "https://upload.pictureserver.net/static/2024/20240603Category11.png"
                           ),
                           getProductById(
@@ -151,7 +132,6 @@ export async function TimerGIF({
                           getProductById(
                             "310523",
                             "https://upload.pictureserver.net/static/2024/20240603Category14.png"
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
                           ),
                         ],
                       })}
@@ -374,11 +354,7 @@ export async function TimerGIF({
           klarna: {
             src: getFooter("Klarna src"),
             href: getFooter("Klarna href"),
-<<<<<<< HEAD
-            //exclude: ["HU"].includes(country),
-=======
             exclude: ["SK", "HU", "BEFR", "BENL"].includes(country),
->>>>>>> 93d3bb7f95f6e89994a7636b5934150b26de1692
           },
           socials: {
             title: getFooter("Socials Title"),
